@@ -1,0 +1,44 @@
+.header {
+	display: flex;
+	justify-content: flex-end;
+	max-height: 96px;
+	border-bottom: 1px solid #C2C2C2;
+  padding: 24px 24px 22px 0px;
+
+	.header-user {
+		display: flex;
+    justify-content: space-between;
+    width: 268px;
+
+		&__btn{
+			border: none;
+			background-color: #fff;
+      margin-right: 20px;
+
+			:hover {
+				cursor: pointer;
+			}
+		}
+
+    &__btn:last-child{
+      margin-right: 0px;
+    }
+
+		&__account {
+			display: flex;
+      align-items: center;
+
+			& span {
+				font-family: "Inter";
+				font-style: normal;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 32px;
+			}
+		}
+		&__account img {
+			border-radius: 50%;
+      margin-right: 20px;
+		}
+	}
+}

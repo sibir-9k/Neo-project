@@ -1,0 +1,44 @@
+@mixin createHoverBtn {
+	background: #5b9479;
+}
+@mixin createActiveBtn {
+	background: #4f896c;
+}
+
+@mixin declineHoverBtn {
+	background: #b03671;
+}
+@mixin declineActiveBtn {
+	background: #832552;
+}
+
+@mixin canselHoverBtn {
+	border-color: #7db59a;
+	color: #7db59a;
+}
+@mixin canselActiveBtn {
+	border-color: #4f896c;
+	color: #4f896c;
+}
+
+button {
+	width: 174px;
+	height: 48px;
+	background: #7db59a;
+	border-radius: 16px;
+	padding: 8px 16px 8px 6px;
+	border: none;
+	cursor: pointer;
+
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 32px;
+	display: flex;
+	color: #ffffff;
+	align-items: center;
+}
+
+a{
+  text-decoration: none;
+}

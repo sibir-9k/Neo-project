@@ -1,0 +1,37 @@
+.header-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 64px;
+
+  &__input {
+    width: 585px;
+    height: 48px;
+    background: rgba($color: #C2C2C2, $alpha: 0.24);
+    border-radius: 16px;
+    padding: 8px 4px 8px 26px;
+    border: none;
+
+    &::placeholder {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 32px;
+      color: #ADADAD;
+    }
+  }
+  &__btn {
+    border: none;
+    background-color: inherit;
+    position: absolute;
+    max-width: 40px;
+    max-height: 40px;
+    top: 5%;
+    right: 2%;
+    
+    :hover {
+      cursor: pointer;
+    }
+  }
+}
