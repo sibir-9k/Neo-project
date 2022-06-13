@@ -13,41 +13,44 @@ import {
 } from "../../../assets/img/index.js"
 import { Link } from "react-router-dom";
 
+const navBlocks = [
+  {
+    key: "1", img: IconHome, path: "/"
+  },
+  {
+    key: "2", img: IconGlobal, path: "/global"
+  },
+  {
+    key: "3", img: IconArchive, path: "/achive"
+  },
+  {
+    key: "4", img: IconPieChart, path: "/chart"
+  },
+  {
+    key: "5", img: IconDollarSing, path: "/dollar"
+  },
+  {
+    key: "6", img: IconDatabase, path: "/database"
+  },
+  {
+    key: "7", img: IconNavigation, path: "/naviganion"
+  }
+]
 
 export const NavBar = () => {
-  const [navBlocks, setNavBlocks] = useState([
-    {
-      key: "1", img: IconHome, path: "/"
-    },
-    {
-      key: "2", img: IconGlobal, path: "/global"
-    },
-    {
-      key: "3", img: IconArchive, path: "/achive"
-    },
-    {
-      key: "4", img: IconPieChart, path: "/chart"
-    },
-    {
-      key: "5", img: IconDollarSing, path: "/dollar"
-    },
-    {
-      key: "6", img: IconDatabase, path: "/database"
-    },
-    {
-      key: "7", img: IconNavigation, path: "/naviganion"
-    }
-  ])
+  const [activeNavBlocks, setActiveNavBlocks] = useState(0)
 
   return (
     <div className="navbar">
-      <buttom className="navbarLogo" href="./#">
+      <Link className="navbarLogo" to="/">
         <img src={LogoHome} alt="logo-company" />
-      </buttom>
+      </Link>
+
       {
         navBlocks.map((item, index) => {
           return (
-            <Link to="" className="navbarItem" key={index}>
+            <Link to="" key={item.key} type="button" className={activeNavBlocks === index ? "navbarItem_active" : "navbarItem"}
+              onClick={() => setActiveNavBlocks(index)}>
               <img src={item.img} alt="" />
             </Link>
           )

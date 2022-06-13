@@ -11,9 +11,9 @@
     border-radius: 16px;
     padding: 8px 4px 8px 26px;
     border: none;
+    outline: none;
 
     &::placeholder {
-      font-family: "Inter";
       font-style: normal;
       font-weight: 400;
       font-size: 18px;

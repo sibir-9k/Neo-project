@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export const Button = () => {
   return (
     <Link to="create">
-      <button>
+      <button className="createClaim">
         <img src={IconPlus} alt="" />
         Create claim
       </button>

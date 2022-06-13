@@ -7,6 +7,7 @@ import { RowTable } from "./RowTable/RowTable"
 
 
 export const Table = () => {
+  
   return (
       <table>
         <tr className="table-header">
