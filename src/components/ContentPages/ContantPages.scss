@@ -3,3 +3,10 @@
 	margin: 0 auto;
 	padding: 56px 0px 0px 56px;
 }
+
+@media screen and (max-width: 375px) {
+ .container{
+  max-width: 375px;
+  padding: 0px 17px 0px 15px;
+ }
+}

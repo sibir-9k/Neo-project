@@ -7,6 +7,8 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import { IncomingClaimPage } from "./CreateClaimPage/IncomingClaimPage/IncomingClaimPage";
+// import { LoginPage } from "./LoginPage/LoginPage";
 
 export const ContentPages = () => {
   return (
@@ -14,6 +16,7 @@ export const ContentPages = () => {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="create" element={<CreateClaimPage />} />
+        <Route path="incoming" element={<IncomingClaimPage />} />
       </Routes>
     </div>
 

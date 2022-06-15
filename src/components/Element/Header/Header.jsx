@@ -4,16 +4,21 @@ import "./Header.scss"
 import {
   IconBell,
   UserImg,
-  LogOutImg
+  LogOutImg,
+  BurgerMenu,
+  IconBellWhite
 } from "../../../assets/img/index.js"
 import { Search } from "../../UI/Search/Search";
 
 export const Header = () => {
   return (
     <header className="header">
-      <Search/>
+      <button className="burger-menu">
+        <img src={BurgerMenu} alt="" />
+      </button>
+      <Search />
       <div className="header-user">
-        <button className="header-user__btn">
+        <button className="header-user__btn btn-bell">
           <img src={IconBell} alt="" />
         </button>
         <div className="header-user__account">

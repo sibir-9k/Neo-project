@@ -1,5 +1,5 @@
 .form {
-	width: 589px;
+	width: 30.68vw;
 
 	&-title {
 		margin-bottom: 40px;
@@ -31,17 +31,16 @@
 			border: none;
 			outline: none;
 			padding: 13px 0px 13px 16px;
-      margin-top: 8px;
+			margin-top: 8px;
 
-
-      display: flex;
-      align-items: center;
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 22px;
-      color: #2d3436;
+			display: flex;
+			align-items: center;
+			font-family: "Inter";
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 22px;
+			color: #2d3436;
 		}
 	}
 
@@ -67,7 +66,7 @@
 			border: none;
 			outline: none;
 			padding: 13px 0px 13px 16px;
-      margin-top: 8px;
+			margin-top: 8px;
 		}
 	}
 
@@ -83,7 +82,7 @@
 			letter-spacing: 2.5px;
 			text-transform: capitalize;
 			color: #adadad;
-	
+
 			::placeholder {
 				display: flex;
 				align-items: center;
@@ -103,11 +102,11 @@
 			border: none;
 			outline: none;
 			padding: 13px 0px 13px 16px;
-      margin-top: 8px;
+			margin-top: 8px;
 
 			// Вводимый текст
 			display: flex;
-      font-family: "Inter";
+			font-family: "Inter";
 			align-items: center;
 			font-style: normal;
 			font-weight: 400;
@@ -115,5 +114,11 @@
 			line-height: 22px;
 			color: #2d3436;
 		}
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.form {
+		width: 91.48vw;
 	}
 }

@@ -2,8 +2,7 @@ import React from "react";
 
 import { Table } from "../../Element/Table/Table.jsx";
 import { Button } from "../../UI/Button/Button.jsx";
-// import { Pagination } from "../../UI/Pagination/Pagination.jsx";
-
+import "./MainPage.scss"
 
 export const MainPage = () => {
   return (
@@ -13,7 +12,6 @@ export const MainPage = () => {
         <Button />
       </div>
       <Table />
-      {/* <Pagination/> */}
     </>
   )
 }

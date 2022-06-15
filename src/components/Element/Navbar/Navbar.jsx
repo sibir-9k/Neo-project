@@ -9,7 +9,7 @@ import {
   IconPieChart,
   IconDollarSing,
   IconDatabase,
-  IconNavigation
+  IconNavigation,
 } from "../../../assets/img/index.js"
 import { Link } from "react-router-dom";
 
@@ -42,14 +42,13 @@ export const NavBar = () => {
 
   return (
     <div className="navbar">
-      <Link className="navbarLogo" to="/">
+      <button className="navbarLogo" to="/">
         <img src={LogoHome} alt="logo-company" />
-      </Link>
-
+      </button>
       {
         navBlocks.map((item, index) => {
           return (
-            <Link to="" key={item.key} type="button" className={activeNavBlocks === index ? "navbarItem_active" : "navbarItem"}
+            <Link to={item.path} key={item.key} type="button" className={activeNavBlocks === index ? "navbarItem_active" : "navbarItem"}
               onClick={() => setActiveNavBlocks(index)}>
               <img src={item.img} alt="" />
             </Link>

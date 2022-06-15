@@ -1,0 +1,20 @@
+.login-page {
+	display: flex;
+	&__img {
+    padding: 100px 130px;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+		background: rgba(211, 237, 225, 0.97);
+	}
+  &__form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 141px 247px;
+  }
+}

@@ -2,31 +2,31 @@
 	display: flex;
 	justify-content: flex-end;
 	max-height: 96px;
-	border-bottom: 1px solid #C2C2C2;
-  padding: 24px 24px 22px 0px;
+	border-bottom: 1px solid #c2c2c2;
+	padding: 24px 24px 22px 0px;
 
 	.header-user {
 		display: flex;
-    justify-content: space-between;
-    width: 268px;
+		justify-content: space-between;
+		width: 268px;
 
-		&__btn{
+		&__btn {
 			border: none;
 			background-color: #fff;
-      margin-right: 20px;
+			margin-right: 20px;
 
 			:hover {
 				cursor: pointer;
 			}
 		}
 
-    &__btn:last-child{
-      margin-right: 0px;
-    }
+		&__btn:last-child {
+			margin-right: 0px;
+		}
 
 		&__account {
 			display: flex;
-      align-items: center;
+			align-items: center;
 
 			& span {
 				font-family: "Inter";
@@ -38,7 +38,47 @@
 		}
 		&__account img {
 			border-radius: 50%;
-      margin-right: 20px;
+			margin-right: 20px;
 		}
+	}
+  .burger-menu {
+		display: none;
+		width: 24px;
+		height: 24px;
+    border: none;
+    background-color: inherit;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.header {
+		background: #7db59a;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+		.header-user {
+			justify-content: flex-end;
+      img{
+        color: #fff;
+      }
+			.btn-bell {
+				border: none;
+        fill: #fff;
+				background-color: inherit;
+			}
+			&__btn:last-child {
+				display: none;
+			}
+			&__account span {
+				display: none;
+			}
+		}
+    .burger-menu {
+      display: flex;
+      width: 24px;
+      height: 24px;
+      border: none;
+      background-color: inherit;
+    }
 	}
 }

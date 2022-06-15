@@ -1,25 +1,23 @@
 import React from "react";
 
 import "./Form.scss"
-import "../../UI/Button/Button"
+import "../../UI/Button/Button.scss"
 export const Form = () => {
 
-  // const [formGroup, setFormGroup] = useState([
-  //   { id: 1, title: 'title', type: 'type', desription: '' }
-  // ])
 
   return (
     <form className="form">
       <div className="form-title">
-        <label className="form-title__label">
+        <label className="form-title__label" for="title">
           Title:
-          <input type="text" className="form-title__input" name="name" placeholder="Type claim title" />
+          <input type="text" className="form-title__input" id="title" name="title" placeholder="Type claim title" disabled />
         </label>
       </div>
       <div className="form-type">
-        <label className="form-type__label">
+        <label className="form-type__label" for="type">
           Type:
-          <select className="form-type__select">
+          <select className="form-type__select" id="type">
+            <option value="">Select type</option>
             <option value="Hardware">Hardware</option>
             <option value="Software">Software</option>
             <option value="Troubleshooting">Troubleshooting</option>
@@ -28,17 +26,11 @@ export const Form = () => {
         </label>
       </div>
       <div className="form-description">
-        <label className="form-description__label">
+        <label className="form-description__label" for="text">
           Description:
-          <br />
-          <textarea  className="form-description__textarea" placeholder="Type claim description" width="100%" height="48px"/>
+          <textarea className="form-description__textarea" id="text" name="text" placeholder="Type claim description" width="100%" height="48px" />
         </label>
       </div>
-
-      <button className="form-cansel__btn">Cansel</button>
-      <button className="form-create__btn">
-        Create
-      </button>
     </form>
   )
 }

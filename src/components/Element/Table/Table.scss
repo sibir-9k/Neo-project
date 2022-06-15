@@ -11,7 +11,7 @@ table {
 	font-style: normal;
 	text-align: left;
 	border-spacing: 100px 10px;
-	width: 1710px;
+	width: 100%;
 	th {
 		border-bottom: 1px solid #c2c2c2;
 	}
@@ -52,5 +52,16 @@ table {
 .title {
 	display: flex;
 	justify-content: space-between;
-	width: 1710px;
+	width: 100%;
 }
+
+
+
+@media screen and (max-width: 375px) {
+  table{
+    // display: none;
+  }
+ }
+
+
+ 

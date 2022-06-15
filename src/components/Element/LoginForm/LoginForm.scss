@@ -1,0 +1,103 @@
+.login-form {
+	width: 24.27vw;
+
+	&__email,
+	.form-email {
+		margin-bottom: 32px;
+
+		&__label {
+			font-style: normal;
+			font-weight: 800;
+			font-size: 12px;
+			line-height: 15px;
+			align-items: center;
+			letter-spacing: 2.5px;
+			text-transform: capitalize;
+			color: #adadad;
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+
+			::placeholder {
+				font-style: normal;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 22px;
+				display: flex;
+				align-items: center;
+				color: #2d3436;
+			}
+		}
+
+		&__input {
+			width: 100%;
+			height: 48px;
+			border: none;
+			background: #f0f0f0;
+			mix-blend-mode: normal;
+			border-radius: 16px;
+			padding: 13px 0px 13px 16px;
+			outline: none;
+			margin-top: 8px;
+		}
+	}
+
+	&__password,
+	.form-password {
+		margin-bottom: 32px;
+		&__label {
+			font-style: normal;
+			font-weight: 800;
+			font-size: 12px;
+			line-height: 15px;
+			display: flex;
+			align-items: center;
+			letter-spacing: 2.5px;
+			text-transform: capitalize;
+			color: #adadad;
+			flex-direction: column;
+			align-items: flex-start;
+
+			::placeholder {
+				font-style: normal;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 22px;
+				display: flex;
+				align-items: center;
+				color: #2d3436;
+			}
+		}
+
+		&__input {
+			width: 100%;
+			height: 48px;
+			border: none;
+			background: #f0f0f0;
+			mix-blend-mode: normal;
+			border-radius: 16px;
+			padding: 13px 0px 13px 16px;
+			outline: none;
+			margin-top: 8px;
+		}
+	}
+
+	&__checkbox,
+	.form-checkbox {
+    display: flex;
+    align-items: center;
+    
+		&__input {
+			margin-right: 11px;
+		}
+		&__label {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 17px;
+			display: flex;
+			align-items: center;
+			color: #2d3436;
+		}
+	}
+}
