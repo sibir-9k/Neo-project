@@ -1,20 +1,26 @@
-import React from "react";
+import React, {useState} from "react";
 
 import "./Header.scss"
 import {
   IconBell,
   UserImg,
   LogOutImg,
-  BurgerMenu,
-  IconBellWhite
+  BurgerMenu
 } from "../../../assets/img/index.js"
 import { Search } from "../../UI/Search/Search";
+import { NavBar } from "../Navbar/Navbar";
 
 export const Header = () => {
+
+const [menuActive, setMenuActive] = useState(true)
+
+const showMenu = () => setMenuActive(!menuActive);
+
   return (
     <header className="header">
-      <button className="burger-menu">
+      <button className="burger-menu" onClick={showMenu}>
         <img src={BurgerMenu} alt="" />
+        <NavBar active={menuActive} setActive={setMenuActive}/>
       </button>
       <Search />
       <div className="header-user">
