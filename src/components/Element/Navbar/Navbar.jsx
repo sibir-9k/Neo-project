@@ -69,7 +69,8 @@ export const NavBar = ({active, setActive}) => {
       {
         navBlocks.map((item, index) => {
           return (
-            <Link to={item.path} key={item.key} type="button" className={activeNavBlocks === index ? "navbarItem_active" : "navbarItem"} onClick={() => setActiveNavBlocks(index)}>
+            <Link to={item.path} key={item.key} type="button" className={activeNavBlocks === index ? "navbarItem_active" : "navbarItem"} 
+            onClick={() => setActiveNavBlocks(index)}>
               <img src={item.img} alt="" />
               <span>{item.title}</span>
             </Link>

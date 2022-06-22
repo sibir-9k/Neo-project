@@ -34,8 +34,8 @@ export const Button = () => {
 export const CreateButton = () => {
   return (
     <>
-      <button className="form-cansel__btn">Cansel</button>
-      <button className="form-create__btn">Create</button>
+      <button className="form-cansel__btn" onClick={() => {} }>Cansel</button>
+      <button className="form-create__btn" onClick={() => {} }>Create</button>
     </>
   )
 }

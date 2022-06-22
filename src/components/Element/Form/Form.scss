@@ -47,6 +47,27 @@
 	&-type {
 		margin-bottom: 40px;
 
+		.select > select {
+			align-items: center;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 22px;
+			color: #2d3436;
+		}
+
+		.select {
+			position: relative;
+		}
+
+		.select img {
+			content: "";
+			position: absolute;
+			top: 25%;
+			right: 17px;
+			pointer-events: none;
+		}
+
 		&__label {
 			font-style: normal;
 			font-weight: 800;
@@ -65,8 +86,9 @@
 			border-radius: 16px;
 			border: none;
 			outline: none;
-			padding: 13px 0px 13px 16px;
+			padding: 13px 17px 13px 16px;
 			margin-top: 8px;
+			appearance: none;
 		}
 	}
 

@@ -1,43 +1,61 @@
+/////////// Отключение крестика в поиске при печати в IE и Chrome ////////////
+input[type="text"]::-ms-clear {
+	display: none;
+	width: 0;
+	height: 0;
+}
+input[type="text"]::-ms-reveal {
+	display: none;
+	width: 0;
+	height: 0;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+	display: none;
+}
+////////////////////////////////////////////////////////////////
 .header-search {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-right: 64px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-right: 64px;
 
-  &__input {
-    width: 585px;
-    height: 48px;
-    background: rgba($color: #C2C2C2, $alpha: 0.24);
-    border-radius: 16px;
-    padding: 8px 4px 8px 26px;
-    border: none;
-    outline: none;
+	&__input {
+		width: 585px;
+		height: 48px;
+		background: rgba($color: #c2c2c2, $alpha: 0.24);
+		border-radius: 16px;
+		padding: 8px 4px 8px 26px;
+		border: none;
+		outline: none;
 
-    &::placeholder {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 32px;
-      color: #ADADAD;
-    }
-  }
-  &__btn {
-    border: none;
-    background-color: inherit;
-    position: absolute;
-    max-width: 40px;
-    max-height: 40px;
-    top: 5%;
-    right: 2%;
-    
-    :hover {
-      cursor: pointer;
-    }
-  }
+		&::placeholder {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 32px;
+			color: #adadad;
+		}
+	}
+	&__btn {
+		border: none;
+		background-color: inherit;
+		position: absolute;
+		max-width: 40px;
+		max-height: 40px;
+		top: 5%;
+		right: 2%;
+
+		:hover {
+			cursor: pointer;
+		}
+	}
 }
 
 @media screen and (max-width: 375px) {
-  .header-search{
-    display: none;
-  }
+	.header-search {
+		display: none;
+	}
 }
