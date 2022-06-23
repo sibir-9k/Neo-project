@@ -1,10 +1,22 @@
 .table-string {
-  width: 48px;
+	width: 48px;
 	border-bottom: 1px solid #c2c2c2;
+
+	&__title,
+  &__create {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 20px;
+		color: #2d3436;
+	}
+  &__create{
+
+  }
 }
 .table-type {
 	display: flex;
-  align-items: center;
+	align-items: center;
 }
 .table-type__circle {
 	width: 16px;
@@ -25,9 +37,9 @@
 	font-size: 12px;
 	line-height: 15px;
 	display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
 	letter-spacing: 2.5px;
 	text-transform: uppercase;
 	color: #ffffff;

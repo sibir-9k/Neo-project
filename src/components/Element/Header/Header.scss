@@ -58,9 +58,7 @@
     padding: 8px 16px;
 		.header-user {
 			justify-content: flex-end;
-      img{
-        color: #fff;
-      }
+
 			.btn-bell {
 				border: none;
         fill: #fff;
@@ -80,6 +78,39 @@
       border: none;
       cursor: pointer;
       background-color: inherit;
+      z-index: 20;
+    }
+	}
+}
+
+@media screen and (max-width: 412px) {
+	.header {
+		background: #7db59a;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+		.header-user {
+			justify-content: flex-end;
+			.btn-bell {
+				border: none;
+        fill: #fff;
+				background-color: inherit;
+			}
+			&__btn:last-child {
+				display: none;
+			}
+			&__account span {
+				display: none;
+			}
+		}
+    .burger-menu {
+      display: flex;
+      width: 24px;
+      height: 24px;
+      border: none;
+      cursor: pointer;
+      background-color: inherit;
+      z-index: 20;
     }
 	}
 }

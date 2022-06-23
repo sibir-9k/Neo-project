@@ -70,9 +70,10 @@ a {
 .form-cansel__btn {
 	border: 1px solid #adadad;
 	border-radius: 16px;
-	padding: 6px 10.5px;
+	padding: 12px 10.5px;
 	cursor: pointer;
 	margin-right: 24px;
+  height: 48px;
 
 	font-style: normal;
 	font-weight: 700;
@@ -89,6 +90,7 @@ a {
 		@include canselActiveBtn;
 	}
 }
+
 .form-decline__btn {
 	background: #e84393;
 	border-radius: 16px;
@@ -107,6 +109,13 @@ a {
 }
 
 @media screen and (max-width: 375px) {
+	.createClaim {
+		width: 48px;
+		height: 48px;
+	}
+}
+
+@media screen and (max-width: 412px) {
 	.createClaim {
 		width: 48px;
 		height: 48px;

@@ -6,10 +6,24 @@ import { RowTable } from "./RowTable/RowTable"
 import { useMobile } from "../../../hooks/useMobile";
 import { Card } from "../Card/Card";
 
-const MobileTable = () => <Card />;
+const MobileTable = (props) => {
+  return (
+    props.rowBlock.map((item, index) => {
+      return (
+        <Card
+          title={item.title}
+          type={item.type}
+          create={item.create}
+          status={item.status}
+          action={item.action}
+        />
+      )
+    })
+  )
+
+}
 
 const DesktopTable = (props) => {
-  console.log(props)
   return (
     <table>
       <tr className="table-header">
@@ -65,7 +79,7 @@ export const Table = () => {
   const { isMobile } = useMobile();
   return (
     <>
-      {isMobile ? <MobileTable /> : <DesktopTable rowBlock={rowBlock} />}
+      {isMobile ? <MobileTable rowBlock={rowBlock} /> : <DesktopTable rowBlock={rowBlock} />}
       {/* <Pagination/> */}
     </>
   )

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 import "./RowTable.scss"
 import { Link } from "react-router-dom"
@@ -10,8 +10,8 @@ export const RowTable = ({title, type, create, status, action}) => {
   return (
     <>
       <tr className="table-string">
-        <td className="">{title}</td>
-        <td className="">{create}</td>
+        <td className="table-string__title">{title}</td>
+        <td className="table-string__create">{create}</td>
         <td className="table-type">
           <div className="table-type__circle"></div>
           {type}
