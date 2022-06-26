@@ -31,14 +31,14 @@ input::-webkit-search-results-decoration {
 		border: none;
 		outline: none;
 
-    display: flex;
-    font-family: "Inter";
-    align-items: center;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    color: #2d3436;
+		display: flex;
+		font-family: "Inter";
+		align-items: center;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 22px;
+		color: #2d3436;
 
 		&::placeholder {
 			font-style: normal;
@@ -57,7 +57,7 @@ input::-webkit-search-results-decoration {
 		top: 5%;
 		right: 2%;
 
-		:hover {
+		&:hover {
 			cursor: pointer;
 		}
 	}

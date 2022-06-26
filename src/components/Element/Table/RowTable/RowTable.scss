@@ -10,8 +10,8 @@
 		line-height: 20px;
 		color: #2d3436;
 	}
-  &__create{
-
+  &:hover{
+    background-color: #E1F3EA;
   }
 }
 .table-type {
@@ -22,14 +22,13 @@
 	width: 16px;
 	height: 16px;
 	margin-right: 16px;
-	background: #83a7c9;
 	border-radius: 50%;
 }
 .table-btn__statys {
 	width: 124px;
 	height: 32px;
 	border-radius: 16px;
-	background-color: #e84393;
+
 
 	font-family: "Inter";
 	font-style: normal;
@@ -42,5 +41,6 @@
 	justify-content: center;
 	letter-spacing: 2.5px;
 	text-transform: uppercase;
-	color: #ffffff;
+	color: #ff0000;
 }
+

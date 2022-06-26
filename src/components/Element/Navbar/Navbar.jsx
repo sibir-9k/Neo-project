@@ -58,19 +58,19 @@ const navBlocks = [
   }
 ]
 
-export const NavBar = ({active, setActive}) => {
+export const NavBar = ({ active, setActive }) => {
   const [activeNavBlocks, setActiveNavBlocks] = useState(0)
 
   return (
-    <div className={active  ? "navbar_active" : "navbar"}>
-      <button className="navbarLogo" to="/">
+    <div className={active ? "navbar_active" : "navbar"}>
+      <Link className="navbarLogo" to="/">
         <img src={LogoHome} alt="logo-company" />
-      </button>
+      </Link>
       {
         navBlocks.map((item, index) => {
           return (
-            <Link to={item.path} key={item.key} type="button" className={activeNavBlocks === index ? "navbarItem_active" : "navbarItem"} 
-            onClick={() => setActiveNavBlocks(index)}>
+            <Link to={item.path} key={item.key} type="button" className={activeNavBlocks === index ? "navbarItem_active" : "navbarItem"}
+              onClick={() => setActiveNavBlocks(index)}>
               <img src={item.img} alt="" />
               <span>{item.title}</span>
             </Link>

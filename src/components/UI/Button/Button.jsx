@@ -4,7 +4,6 @@ import { IconPlus } from "../../../assets/img/index.js"
 import "./Button.scss"
 import { Link } from "react-router-dom";
 import { useMobile } from "../../../hooks/useMobile.jsx";
-import { useState } from "react";
 
 
 const MobileTable = () =>
@@ -31,18 +30,17 @@ export const Button = () => {
     </>
   )
 }
+<Link to="/" className="form-cansel__btn">Cansel</Link>
 
-
-
-
-
-export const CreateButton = () => {
-
+export const CanselButton = () => {
   return (
-    <>
-      <Link to="/" className="form-cansel__btn">Cansel</Link>
-      <button className="form-create__btn" onClick={() => { }}>Create</button>
-    </>
+    <Link to="/" className="form-cansel__btn">Cansel</Link>
+  )
+}
+
+export const CreateButton = ({ onCreatedClick }) => {
+  return (
+    <button className="form-create__btn" onClick={onCreatedClick}>Create</button>
   )
 }
 

@@ -1,52 +1,75 @@
-import React, {useState} from "react";
-import {IconArrowDown} from "../../../assets/img/index.js"
+import React, { useState } from "react";
+import moment from "moment";
+import { v4 as uuidv4 } from 'uuid';
+import { useDispatch } from "react-redux";
+
 import "./Form.scss"
 import "../../UI/Button/Button.scss"
+import { CreateButton, CanselButton } from "../../UI/Button/Button";
+import { Input } from "./Input/Input.jsx";
+import { Select } from "./Select/Select.jsx";
+import { Description } from "./Description/Description";
+import { createRow } from "../../../store/action/actions";
+
 export const Form = () => {
 
-  const[title, setTitle] = useState('')
-  const[type, setType] = useState('')
-  const[description, setDescription] = useState('')
+  const [form, setForm] = useState({ title: '', type: '', description: '' })
+  const dispatch = useDispatch();
 
-  const onChangeTitle = (e) => {
-    setTitle(e.target.value)
+  const onCreatedClick = () => {
+    const createOnObject = {
+      title: form.title,
+      type: form.type,
+      description: form.description,
+      status: '',
+      create: moment().utc().format('DD/MM/YYYY'),
+      id: uuidv4()
+    }
+    dispatch(createRow(createOnObject))
   }
-  const onChangeType = (e) => {
-    setType(e.target.value)
-  }
-  const onChangeDescription = (e) => {
-    setDescription(e.target.value)
-  }
+
+  // const [title, setTitle] = useState('')
+  // const [type, setType] = useState('')
+  // const [description, setDescription] = useState('')
+
+  // const onChangeTitle = (e) => {
+  //   setTitle(e.target.value)
+  // }
+  // const onChangeType = (e) => {
+  //   setType(e.target.value)
+  // }
+  // const onChangeDescription = (e) => {
+  //   setDescription(e.target.value)
+  // }
+
+  // const handleAddElement = (e) => {
+  //   e.preventDefault()
+  //   const newForm = {
+  //     ...form, id: Date.now()
+  //   }
+  //   setForm({ title: '', type: '', description: '' })
+  //   console.log(newForm)
+  // }
 
   return (
-    <form className="form">
-      <div className="form-title">
-        <label className="form-title__label" for="title">
-          Title:
-          <input type="text" onChange={onChangeTitle} value={title} className="form-title__input" id="title" name="title" placeholder="Type claim title" />
-        </label>
-      </div>
-      <div className="form-type">
-        <label className="form-type__label" for="type">
-          Type:
-          <div className="select">
-          <select className="form-type__select" id="type" onChange={onChangeType} value={type}>
-            <option value="">Select type</option>
-            <option value="Hardware">Hardware</option>
-            <option value="Software">Software</option>
-            <option value="Troubleshooting">Troubleshooting</option>
-            <option value="Networking">Networking</option>
-          </select>
-          <img src={IconArrowDown} alt="" />
-          </div>
-        </label>
-      </div>
-      <div className="form-description">
-        <label className="form-description__label" for="text">
-          Description:
-          <textarea className="form-description__textarea" onChange={onChangeDescription} value={description} id="text" name="text" placeholder="Type claim description" width="100%" height="48px" />
-        </label>
-      </div>
-    </form>
+    // <form className="form">
+    <>
+      <Input
+        onChangeTitle={e => setForm({ ...form, title: e.target.value })}
+        type="text"
+        value={form.title} />
+      <Select
+        onChangeType={e => setForm({ ...form, type: e.target.value })}
+        type="text"
+        value={form.type} />
+      <Description
+        onChangeDescription={e => setForm({ ...form, description: e.target.value })}
+        type="text"
+        value={form.description} />
+      <CanselButton />
+      <CreateButton onCreatedClick={onCreatedClick} />
+    </>
+
+    // </form>
   )
 }

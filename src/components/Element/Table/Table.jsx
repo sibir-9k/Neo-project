@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux"
 
 import "./Table.scss"
 import { RowTable } from "./RowTable/RowTable"
-// import {Pagination} from "../../UI/Pagination/Pagination"
 import { useMobile } from "../../../hooks/useMobile";
 import { Card } from "../Card/Card";
 
@@ -14,13 +14,10 @@ const MobileTable = (props) => {
           title={item.title}
           type={item.type}
           create={item.create}
-          status={item.status}
-          action={item.action}
-        />
+          status={item.status} />
       )
     })
   )
-
 }
 
 const DesktopTable = (props) => {
@@ -34,6 +31,7 @@ const DesktopTable = (props) => {
         <th className="table-header__title">Actions</th>
       </tr>
 
+
       {
         props.rowBlock.map((item, index) => {
           return (
@@ -41,10 +39,8 @@ const DesktopTable = (props) => {
               title={item.title}
               type={item.type}
               create={item.create}
-              status={item.status}
-              action={item.action} />
+              status={item.status} />
           )
-
         })
       }
     </table>
@@ -52,35 +48,14 @@ const DesktopTable = (props) => {
 }
 
 export const Table = () => {
-  const [rowBlock, setRowBlock] = useState([
-    {
-      title: 'Figma smart web system for to build',
-      create: '12/04/2021',
-      type: 'Hardware',
-      status: 'declined',
-      actions: 'Browse'
-    },
-    {
-      title: 'Figma smart web system for to build',
-      create: '12asdgkns/04/2021',
-      type: 'Hardware',
-      status: 'declined',
-      actions: 'Browse'
-    },
-    {
-      title: 'Figma smart web system for to build',
-      create: '1215135135/04/2021',
-      type: 'Hardware',
-      status: 'declined',
-      actions: 'Browse'
-    }
-  ])
+
+  const rowBlock = useSelector((state) => state.list.claims)
 
   const { isMobile } = useMobile();
+  
   return (
     <>
-      {isMobile ? <MobileTable rowBlock={rowBlock} /> : <DesktopTable rowBlock={rowBlock} />}
-      {/* <Pagination/> */}
+      {isMobile ? <MobileTable rowBlock={rowBlock}/> : <DesktopTable rowBlock={rowBlock} />}
     </>
   )
 }

@@ -58,11 +58,11 @@ a {
 	letter-spacing: 0.25px;
 	color: #ffffff;
 
-	:hover {
+	&:hover {
 		@include createHoverBtn;
 	}
 
-	:active {
+	&:active {
 		@include createActiveBtn;
 	}
 }
@@ -82,11 +82,11 @@ a {
 	letter-spacing: 0.25px;
 	color: #858585;
 
-	:hover {
+	&:hover {
 		@include canselHoverBtn;
 	}
 
-	:active {
+	&:active {
 		@include canselActiveBtn;
 	}
 }
