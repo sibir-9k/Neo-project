@@ -1,7 +1,8 @@
 .form {
-	width: 30.68vw;
+	// width: 30.68vw;
 
 	&-title {
+    width: 30.68vw;
 		margin-bottom: 40px;
 
 		&__label {
@@ -45,6 +46,7 @@
 	}
 
 	&-type {
+    width: 30.68vw;
 		margin-bottom: 40px;
 
 		.select > select {
@@ -93,6 +95,7 @@
 	}
 
 	&-description {
+    width: 30.68vw;
 		margin-bottom: 40px;
 
 		&__label {
@@ -141,12 +144,20 @@
 
 @media screen and (max-width: 375px) {
 	.form {
-		width: 91.48vw;
+    &-title,
+    &-type,
+    &-description {
+      width: 91.48vw;
+    }
 	}
 }
 
 @media screen and (max-width: 412px) {
 	.form {
-		width: 89.81vw;
+    &-title,
+    &-type,
+    &-description{
+      width: 89.81vw;
+    }	
 	}
 }

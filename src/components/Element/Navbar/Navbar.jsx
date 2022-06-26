@@ -63,9 +63,9 @@ export const NavBar = ({ active, setActive }) => {
 
   return (
     <div className={active ? "navbar_active" : "navbar"}>
-      <Link className="navbarLogo" to="/">
+      <div className="navbarLogo" to="/">
         <img src={LogoHome} alt="logo-company" />
-      </Link>
+      </div>
       {
         navBlocks.map((item, index) => {
           return (
