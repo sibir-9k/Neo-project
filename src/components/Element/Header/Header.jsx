@@ -5,6 +5,7 @@ import {UserImg,LogOutImg,BurgerMenu} from "../../../assets/img/index.js"
 import { Search } from "../../UI/Search/Search";
 import { NavBar } from "../Navbar/Navbar";
 import { useMobile } from "../../../hooks/useMobile";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
 
@@ -43,9 +44,9 @@ export const Header = () => {
             <span>Егор Фролов</span>
           </div>
         </div>
-        <button className="header-user__btn">
+        <Link to="login" className="header-user__btn">
           <img src={LogOutImg} alt="" />
-        </button>
+        </Link>
       </div>
     </header>
   )

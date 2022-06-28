@@ -86,6 +86,7 @@
 	.form-checkbox {
     display: flex;
     align-items: center;
+    margin-bottom: 35px;
     
 		&__input {
 			margin-right: 11px;
@@ -101,3 +102,16 @@
 		}
 	}
 }
+.req-registration{
+  color:#2F80ED ;
+}
+
+@media screen and (max-width: 375px) {
+  .login-form {
+    width: 91.47vw;
+  }
+ }
+ 
+ @media screen and (max-width: 412px) {
+  
+  }

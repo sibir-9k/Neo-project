@@ -21,7 +21,6 @@ const DesktopTable = () =>
     </button>
   </Link>
 
-
 export const Button = () => {
   const { isMobile } = useMobile();
   return (
@@ -30,7 +29,6 @@ export const Button = () => {
     </>
   )
 }
-<Link to="/" className="form-cansel__btn">Cansel</Link>
 
 export const CanselButton = () => {
   return (
@@ -49,3 +47,9 @@ export const IncomingButton = () => {
     <button className="form-decline__btn">Decline</button>
   )
 } 
+
+export const LoginButton = () => {
+  return (
+    <button className="login-form__btn">Login</button>
+  )
+}
