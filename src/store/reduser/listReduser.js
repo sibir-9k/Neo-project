@@ -11,7 +11,7 @@ const initialState = {
 		{
       id: '2',
 			title: "Figma smart web system for to build",
-			create: "12asdgkns/04/2021",
+			create: "12/04/2021",
 			type: "Software",
 			status: "new",
       description: 'zl,fl,sdl;f'
@@ -19,7 +19,7 @@ const initialState = {
 		{
       id: '3',
 			title: "Figma smart web system for to build",
-			create: "1215135135/04/2021",
+			create: "12/04/2021",
 			type: "Networking",
 			status: "in progress",
       description: 'ASFas,gal,df'

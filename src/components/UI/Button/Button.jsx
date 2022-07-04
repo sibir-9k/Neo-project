@@ -53,3 +53,9 @@ export const LoginButton = () => {
     <button className="login-form__btn">Login</button>
   )
 }
+
+export const RegButton = () => {
+  return (
+    <button className="login-form__btn">Register</button>
+  )
+}

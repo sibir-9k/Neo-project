@@ -9,14 +9,26 @@
 		display: flex;
 		justify-content: space-between;
 		width: 268px;
+		align-items: center;
 
 		&__btn {
 			border: none;
 			background-color: #fff;
 			margin-right: 20px;
+			position: relative;
 
 			:hover {
 				cursor: pointer;
+			}
+
+			.notification {
+				position: absolute;
+				border-radius: 50%;
+				background-color: #e84393;
+				width: 9px;
+				height: 9px;
+				top: 8px;
+				right: 9px;
 			}
 		}
 
@@ -41,27 +53,27 @@
 			margin-right: 20px;
 		}
 	}
-  .burger-menu {
+	.burger-menu {
 		display: none;
 		width: 24px;
 		height: 24px;
-    border: none;
-    background-color: inherit;
+		border: none;
+		background-color: inherit;
 	}
 }
 
 @media screen and (max-width: 375px) {
 	.header {
 		background: #7db59a;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 16px;
+		justify-content: space-between;
+		align-items: center;
+		padding: 8px 16px;
 		.header-user {
 			justify-content: flex-end;
 
 			.btn-bell {
 				border: none;
-        fill: #fff;
+				fill: #fff;
 				background-color: inherit;
 			}
 			&__btn:last-child {
@@ -71,29 +83,29 @@
 				display: none;
 			}
 		}
-    .burger-menu {
-      display: flex;
-      width: 24px;
-      height: 24px;
-      border: none;
-      cursor: pointer;
-      background-color: inherit;
-      z-index: 20;
-    }
+		.burger-menu {
+			display: flex;
+			width: 24px;
+			height: 24px;
+			border: none;
+			cursor: pointer;
+			background-color: inherit;
+			z-index: 20;
+		}
 	}
 }
 
 @media screen and (max-width: 412px) {
 	.header {
 		background: #7db59a;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 16px;
+		justify-content: space-between;
+		align-items: center;
+		padding: 8px 16px;
 		.header-user {
 			justify-content: flex-end;
 			.btn-bell {
 				border: none;
-        fill: #fff;
+				fill: #fff;
 				background-color: inherit;
 			}
 			&__btn:last-child {
@@ -103,14 +115,14 @@
 				display: none;
 			}
 		}
-    .burger-menu {
-      display: flex;
-      width: 24px;
-      height: 24px;
-      border: none;
-      cursor: pointer;
-      background-color: inherit;
-      z-index: 20;
-    }
+		.burger-menu {
+			display: flex;
+			width: 24px;
+			height: 24px;
+			border: none;
+			cursor: pointer;
+			background-color: inherit;
+			z-index: 20;
+		}
 	}
 }

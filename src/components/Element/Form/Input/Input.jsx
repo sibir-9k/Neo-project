@@ -13,6 +13,7 @@ export const Input = ({ value, onChangeTitle }) => {
           id="title"
           name="title"
           placeholder="Type claim title"
+          required
         />
       </label>
     </div>
