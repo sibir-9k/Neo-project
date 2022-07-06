@@ -4,6 +4,13 @@
 	&__email,
 	.form-email {
 		margin-bottom: 32px;
+		position: relative;
+
+		.form-email__img {
+			position: absolute;
+			top: 38%;
+			right: 3%;
+		}
 
 		&__label {
 			font-style: normal;
@@ -44,6 +51,14 @@
 
 	&__password,
 	.form-password {
+		position: relative;
+
+		.form-password__img {
+			position: absolute;
+			top: 38%;
+			right: 3%;
+		}
+
 		margin-bottom: 32px;
 		&__label {
 			font-style: normal;
@@ -84,10 +99,10 @@
 
 	&__checkbox,
 	.form-checkbox {
-    display: flex;
-    align-items: center;
-    margin-bottom: 35px;
-    
+		display: flex;
+		align-items: center;
+		margin-bottom: 35px;
+
 		&__input {
 			margin-right: 11px;
 		}
@@ -102,16 +117,15 @@
 		}
 	}
 }
-.req-registration{
-  color:#2F80ED ;
+.req-registration {
+	color: #2f80ed;
 }
 
 @media screen and (max-width: 375px) {
-  .login-form {
-    width: 91.47vw;
-  }
- }
- 
- @media screen and (max-width: 412px) {
-  
-  }
+	.login-form {
+		width: 91.47vw;
+	}
+}
+
+@media screen and (max-width: 412px) {
+}

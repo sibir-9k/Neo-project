@@ -21,7 +21,13 @@
 }
 
 @media screen and (max-width: 375px) {
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
 	.login-page {
+    flex: 1 0 auto;
 		&__img {
 			display: none;
 		}
@@ -33,6 +39,11 @@
 			flex-direction: column;
 			justify-content: space-evenly;
 			padding: 48px 16px;
+
+      .form__img img{
+        width: 96px;
+        height: 93px;
+      }
 		}
 	}
 }

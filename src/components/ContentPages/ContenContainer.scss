@@ -2,6 +2,8 @@
 	max-width: 1710px;
 	margin: 0 auto;
 	padding: 56px 0px 0px 56px;
+  overflow-y: auto;
+  height: 100vh;
 }
 
 @media screen and (max-width: 375px) {
