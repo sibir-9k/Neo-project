@@ -5,6 +5,7 @@ h1 {
 	line-height: 44px;
 	margin-bottom: 50px;
 }
+
 table {
 	border-collapse: collapse;
 	font-family: "Inter";
@@ -12,31 +13,39 @@ table {
 	text-align: left;
 	border-spacing: 100px 10px;
 	width: 100%;
+
 	th {
 		border-bottom: 1px solid #c2c2c2;
 	}
+
 	td {
 		max-height: 48px;
 	}
+
 	td:first-child,
 	th:first-child {
 		padding-left: 24px;
-		width: 490px;
+    width: 30%;
 	}
+
 	td:nth-child(2),
 	th:nth-child(2) {
-		width: 300px;
+    width: 18%;
+
 	}
+
 	td:nth-child(3),
 	th:nth-child(3) {
 		padding: 15px 0;
 		width: 300px;
 	}
+
 	th:nth-child(4),
 	td:nth-child(4) {
-		width: 310px;
+    width: 17%;
 	}
 }
+
 .table-header {
 	background: #f1f1f1;
 	width: 56px;
@@ -49,13 +58,12 @@ table {
 		color: #2d3436;
 	}
 }
+
 .title {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
 }
-
-
 
 @media screen and (max-width: 375px) {
   table{

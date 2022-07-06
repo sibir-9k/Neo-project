@@ -46,6 +46,16 @@
 			padding: 13px 0px 13px 16px;
 			outline: none;
 			margin-top: 8px;
+
+    // Вводимый текст
+			display: flex;
+			font-family: "Inter";
+			align-items: center;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 22px;
+			color: #2d3436;
 		}
 	}
 
@@ -128,4 +138,7 @@
 }
 
 @media screen and (max-width: 412px) {
+  .login-form {
+		width: 91.47vw;
+	}
 }
