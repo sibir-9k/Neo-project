@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Form } from "../../Element/Form/Form";
+import { ClaimForm } from "../../Element/Forms/ClaimForm/ClaimForm"
 import { Navigation } from "../Navigation/Navigation";
 import "./CreateClaimPage.scss"
 import "../ContenContainer.scss"
@@ -13,7 +13,7 @@ export const CreateClaimPage = () => {
         <div className="title">
           <h1>Creating new claim</h1>
         </div>
-        <Form />
+        <ClaimForm />
       </div>
     </>
   )

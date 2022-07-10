@@ -3,7 +3,7 @@ import React from "react";
 import { IconPlus } from "../../../assets/img/index.js"
 import "./Button.scss"
 import { Link } from "react-router-dom";
-import { useMobile } from "../../../hooks/useMobile.jsx";
+import { useMobile } from "../../../hooks/useMobile/useMobile.jsx";
 
 
 const MobileTable = () =>
@@ -36,9 +36,9 @@ export const CanselButton = () => {
   )
 }
 
-export const CreateButton = ({ onCreatedClick }) => {
+export const CreateButton = ({ onCreatedClick, disabled }) => {
   return (
-    <button className="form-create__btn" onClick={onCreatedClick}>Create</button>
+    <button disabled={disabled} className="form-create__btn" onClick={onCreatedClick}>Create</button>
   )
 }
 

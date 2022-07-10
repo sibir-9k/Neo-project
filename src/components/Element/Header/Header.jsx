@@ -4,7 +4,7 @@ import "./Header.scss"
 import { UserImg, LogOutImg, BurgerMenu } from "../../../assets/img/index.js"
 import { Search } from "../../UI/Search/Search";
 import { NavBar } from "../Navbar/Navbar";
-import { useMobile } from "../../../hooks/useMobile";
+import { useMobile } from "../../../hooks/useMobile/useMobile";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
@@ -29,12 +29,11 @@ export const Header = () => {
       </svg>
     </>
 
-
   return (
     <header className="header">
       <button className="burger-menu" onClick={showMenu}>
         <img src={BurgerMenu} alt="" />
-        <NavBar active={menuActive} setActive={setMenuActive} />
+        <NavBar active={!menuActive} setActive={setMenuActive} />
       </button>
       <Search />
       <div className="header-user">
@@ -48,7 +47,7 @@ export const Header = () => {
             <span>Егор Фролов</span>
           </div>
         </div>
-        <Link to="login" className="header-user__btn">
+        <Link to="/login" className="header-user__btn">
           <img src={LogOutImg} alt="" />
         </Link>
       </div>

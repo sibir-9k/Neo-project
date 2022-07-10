@@ -3,40 +3,8 @@ import { useSelector } from "react-redux"
 
 import "./Table.scss"
 import { RowTable } from "./RowTable/RowTable"
-import { useMobile } from "../../../hooks/useMobile";
+import { useMobile } from "../../../hooks/useMobile/useMobile";
 import { Card } from "../Card/Card";
-
-
-
-// const claimTypeColor = (type) => {
-//   switch (type) {
-//     case "Hardwere":
-//       return { background: '#7DB59A' }
-//     case "Software":
-//       return { background: '#FF7675' }
-//     case "Troubleshooting":
-//       return { background: '#6C5CE7' }
-//     case "Networking":
-//       return { background: '#FDCB6E' }
-//     default:
-//       return null
-//   }
-// }
-
-// const claimStatusColor = (status) => {
-//   switch (status) {
-//     case "declined":
-//       return { background: '#E84393' }
-//     case "new":
-//       return { background: '#6C5CE7' }
-//     case "in progress":
-//       return { background: '#FDCB6E' }
-//     case "done":
-//       return { background: '#00B894' }
-//     default:
-//       return null
-//   }
-// }
 
 
 const MobileTable = (props) => {

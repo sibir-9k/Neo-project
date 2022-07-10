@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Form } from "../../../Element/Form/Form";
+import { ClaimForm } from "../../../Element/Forms/ClaimForm/ClaimForm";
 import { IncomingButton } from "../../../UI/Button/Button";
 import { Navigation } from "../../Navigation/Navigation";
 import "./IncomingClaimPage.scss"
@@ -14,7 +14,7 @@ export const IncomingClaimPage = () => {
         <div className="title">
           <h1>Incoming claim</h1>
         </div>
-        <Form />
+        <ClaimForm />
         {/* <div className="conteiner-btn"> */}
         <IncomingButton />
         {/* </div> */}
