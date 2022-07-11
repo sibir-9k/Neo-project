@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 import { StartImg, LogoLoginPage } from "../../../assets/img";
 import { Footer } from "../../Element/Footer/Footer";
-import { LoginForm } from "../../Element/Forms/LoginForm/LoginForm";
-import "./LoginPage.scss"
+import { RegisterForm } from "../../Element/Forms/RegisterForm/RegisterForm";
 
-export const LoginPage = () => {
+export const RegisterPage = () => {
+
   return (
     <div className="wrapper">
       <div className="login-page">
@@ -17,9 +17,9 @@ export const LoginPage = () => {
           <div className="form__img">
             <img src={LogoLoginPage} alt="" />
           </div>
-          <LoginForm />
-          <p>Not a member? 
-            <Link to="/register" className="req-registration"> Request registration.</Link>
+          <RegisterForm />
+          <p>Already registered?
+            <Link to="/login"className="req-registration"> Let's go to your account</Link>
           </p>
         </div>
       </div>

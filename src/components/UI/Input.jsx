@@ -1,7 +1,7 @@
 import React from "react";
 
 import "../Element/Forms/ClaimForm/ClaimForm.scss"
-import { IconLock, IconMail } from "../../assets/img/index.js"
+import { IconLock, IconMail, IconUser } from "../../assets/img/index.js"
 
 export const Input = (
   { value,
@@ -20,16 +20,20 @@ export const Input = (
   const classDivImg = (className) => {
     if (className === 'form-email__input') {
       return className = "form-email__img"
-    } else if (className === 'form-password__input') {
+    } else if (className === "form-password__input") {
       return className = "form-password__img"
+    } else if (className === "form-fullname__input") {
+      return className = "form-fullname__img"
     }
   }
 
   const iconInput = (className) => {
     if (className === 'form-email__input') {
-      return <img src={IconMail} alt="" />
-    } else if (className === 'form-password__input') {
-      return <img src={IconLock} alt="" />
+      return <img src={IconMail} alt=""/>
+    } else if (className === "form-password__input") {
+      return <img src={IconLock} alt=""/>
+    } else if (className === "form-fullname__input") {
+      return <img src={IconUser} alt=""/>
     }
   }
 

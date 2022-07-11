@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./ClaimForm.scss"
+// import "./ClaimForm.scss"
 
 export const Description = ({ value, onChangeDescription, label, onChangeValid, className,onBlur, placeholder }) => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./ClaimForm.scss"
+// import "./ClaimForm.scss"
 import { IconArrowDown } from "../../../../assets/img/index"
 
 export const Select = ({ onChangeType, value, label, className, onChangeValid, onBlur }) => {

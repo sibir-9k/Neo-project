@@ -1,18 +1,15 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
 import { LoginButton } from "../../../UI/Button/Button";
-import "./LoginForm.scss"
 import { useInput } from "../../../../hooks/useValidate/useValidation";
 import { Input } from "../../../UI/Input.jsx";
+import "./LoginForm.scss"
 
 export const LoginForm = () => {
 
   const email = useInput('', { isEmpty: true, minLength: 2 })
   const password = useInput('', { isEmpty: true, minLength: 2 })
 
-  console.log(email , "email")
-  console.log(password , "password" )
   return (
     <>
       <form className="login-form">
@@ -39,7 +36,6 @@ export const LoginForm = () => {
           wrapperLabel="login-form__password form-password"
           type="password"
 
-          required
           onChangeValid={e => password.onChange(e)}
           onBlur={e => password.onBlur(e)}
         />
@@ -49,10 +45,8 @@ export const LoginForm = () => {
           <label className="form-checkbox__label" htmlFor="check-login">Keep me logged in</label>
         </div>
 
-        <LoginButton />
+        <LoginButton value="Login"/>
       </form>
-
-      <p>Not a member? <Link to="#" className="req-registration" >Request registration.</Link></p>
     </>
 
 

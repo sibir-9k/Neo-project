@@ -58,6 +58,5 @@ export const useInput = (initialValue, validations) => {
     isDirty,
     ...valid
   }
-  
 }
 

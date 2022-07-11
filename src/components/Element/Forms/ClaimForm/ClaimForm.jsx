@@ -3,7 +3,7 @@ import moment from "moment";
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from "react-redux";
 
-import "./ClaimForm.scss"
+// import "./ClaimForm.scss"
 import "../../../UI/Button/Button.scss"
 import { CreateButton, CanselButton } from "../../../UI/Button/Button";
 import { Input } from "../../../UI/Input.jsx";
