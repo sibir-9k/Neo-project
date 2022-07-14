@@ -3,7 +3,9 @@ import React from "react";
 import "../Element/Forms/ClaimForm/ClaimForm.scss"
 import { IconLock, IconMail, IconUser } from "../../assets/img/index.js"
 
+
 export const Input = (
+  
   { value,
     onChangeTitle,
     onChangeValid,
@@ -11,7 +13,8 @@ export const Input = (
     label,
     type,
     placeholder,
-    name,
+    htmlFor,
+    id,
     className,
     labelClassName,
     wrapperLabel
@@ -39,16 +42,20 @@ export const Input = (
 
   return (
     <div className={wrapperLabel}>
-      <label className={labelClassName}>
+      <label className={labelClassName} htmlFor={htmlFor}>
         {label}:
         <input
           value={value}
-          onChange={e => { onChangeValid(e) ; onChangeTitle(e) }}
+          onChange={e => { 
+            onChangeValid(e);  
+            // onChangeTitle(e) 
+          }}
           onBlur={onBlur}
           className={className}
-          name={name}
           placeholder={placeholder}
           type={type}
+          id={id}
+          autoComplete="off"
           required
         />
         <div className={classDivImg(className)}>{iconInput(className)}</div>

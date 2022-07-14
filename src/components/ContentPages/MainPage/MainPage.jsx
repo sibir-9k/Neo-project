@@ -13,7 +13,7 @@ export const MainPage = () => {
       <div className="container">
         <div className="title">
           <h1>Your claims</h1>
-          <Button />
+          <Button type="create-claim"/>
         </div>
         <Table />
       </div>

@@ -15,7 +15,6 @@ export const useMobile = () => {
   }, []);
 
   const isMobile = width <= 768;
-  console.log(width)
   return { isMobile };
 
 };

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { ClaimForm } from "../../../Element/Forms/ClaimForm/ClaimForm";
-import { IncomingButton } from "../../../UI/Button/Button";
+import { Button } from "../../../UI/Button/Button";
 import { Navigation } from "../../Navigation/Navigation";
 import "./IncomingClaimPage.scss"
 import "../../ContenContainer.scss"
@@ -16,7 +16,7 @@ export const IncomingClaimPage = () => {
         </div>
         <ClaimForm />
         {/* <div className="conteiner-btn"> */}
-        <IncomingButton />
+        <Button className="form-decline__btn" value="Decline"/>
         {/* </div> */}
       </div>
     </>

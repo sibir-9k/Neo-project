@@ -3,9 +3,8 @@ import moment from "moment";
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from "react-redux";
 
-// import "./ClaimForm.scss"
 import "../../../UI/Button/Button.scss"
-import { CreateButton, CanselButton } from "../../../UI/Button/Button";
+import { Button } from "../../../UI/Button/Button";
 import { Input } from "../../../UI/Input.jsx";
 import { Select } from "./Select.jsx";
 import { Description } from "./Description";
@@ -74,8 +73,8 @@ export const ClaimForm = () => {
         onChangeValid={e => description.onChange(e)}
         onBlur={e => description.onBlur(e)}
       />
-      <CanselButton />
-      <CreateButton disabled={!title.inputValid || !type.inputValid || !description.inputValid} onCreatedClick={() => { onCreatedClick() }} />
+      <Button value="Cansel" type="cansel"/>
+      <Button value="Create" type="create" disabled={!title.inputValid || !type.inputValid || !description.inputValid} onCreatedClick={() => { onCreatedClick() }} />
     </>
   )
 }

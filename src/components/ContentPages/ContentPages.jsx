@@ -16,7 +16,7 @@ export const ContentPages = () => {
       <Route path="login" element={<LoginPage />} />
       <Route path="register" element={<RegisterPage />} />
       <Route path="/" element={<MainPage />} />
-      <Route path="create" element={<CreateClaimPage />} />
+      <Route path="create-claim" element={<CreateClaimPage />} />
       <Route path="incoming" element={<IncomingClaimPage />} />
     </Routes>
   )
