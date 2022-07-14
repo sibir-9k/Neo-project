@@ -1,8 +1,7 @@
 .form {
-	// width: 30.68vw;
 
 	&-title {
-    width: 30.68vw;
+		width: 30.68vw;
 		margin-bottom: 40px;
 
 		&__label {
@@ -42,11 +41,16 @@
 			font-size: 18px;
 			line-height: 22px;
 			color: #2d3436;
+
+			&:focus {
+				outline: 4px solid rgba(253, 203, 110, 0.4);
+				background: rgba(236, 210, 175, 0.609);
+			}
 		}
 	}
 
 	&-type {
-    width: 30.68vw;
+		width: 30.68vw;
 		margin-bottom: 40px;
 
 		.select > select {
@@ -91,11 +95,15 @@
 			padding: 13px 17px 13px 16px;
 			margin-top: 8px;
 			appearance: none;
+			&:focus {
+				outline: 4px solid rgba(253, 203, 110, 0.4);
+				background: rgba(236, 210, 175, 0.609);
+			}
 		}
 	}
 
 	&-description {
-    width: 30.68vw;
+		width: 30.68vw;
 		margin-bottom: 40px;
 
 		&__label {
@@ -138,26 +146,30 @@
 			font-size: 18px;
 			line-height: 22px;
 			color: #2d3436;
+			&:focus {
+				outline: 4px solid rgba(253, 203, 110, 0.4);
+				background: rgba(236, 210, 175, 0.609);
+			}
 		}
 	}
 }
 
 @media screen and (max-width: 375px) {
 	.form {
-    &-title,
-    &-type,
-    &-description {
-      width: 91.48vw;
-    }
+		&-title,
+		&-type,
+		&-description {
+			width: 91.48vw;
+		}
 	}
 }
 
 @media screen and (max-width: 412px) {
 	.form {
-    &-title,
-    &-type,
-    &-description{
-      width: 89.81vw;
-    }	
+		&-title,
+		&-type,
+		&-description {
+			width: 89.81vw;
+		}
 	}
 }
