@@ -1,6 +1,6 @@
 import React from "react"
-import { claimTypeColor } from "../../../functions/claimTypeColor";
-import { claimStatusColor } from "../../../functions/claimStatusColor";
+import { claimStatusColor } from "../../../../functions/claimStatusColor.js"
+import { claimTypeColor } from "../../../../functions/claimTypeColor.js"
 import "./RowTable.scss"
 import { Link } from "react-router-dom"
 

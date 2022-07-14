@@ -1,6 +1,6 @@
 import React from "react";
-import { claimTypeColor } from "../../../functions/claimTypeColor";
-import { claimStatusColor } from "../../../functions/claimStatusColor";
+import { claimTypeColor } from "../../../functions/claimTypeColor.js";
+import { claimStatusColor } from "../../../functions/claimStatusColor.js";
 import "./Card.scss";
 import { Link } from "react-router-dom";
 
