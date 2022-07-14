@@ -1,38 +1,8 @@
 import React from "react";
-
+import { claimTypeColor } from "../../../functions/claimTypeColor";
+import { claimStatusColor } from "../../../functions/claimStatusColor";
 import "./Card.scss";
 import { Link } from "react-router-dom";
-
-
-const claimTypeColor = (type) => {
-  switch (type) {
-    case "Hardwere":
-      return { background: '#7DB59A' }
-    case "Software":
-      return { background: '#FF7675' }
-    case "Troubleshooting":
-      return { background: '#6C5CE7' }
-    case "Networking":
-      return { background: '#FDCB6E' }
-    default:
-      return { background: '#7DB59A' }
-  }
-}
-
-const claimStatusColor = (status) => {
-  switch (status) {
-    case "declined":
-      return { background: '#E84393' }
-    case "new":
-      return { background: '#6C5CE7' }
-    case "in progress":
-      return { background: '#FDCB6E' }
-    case "done":
-      return { background: '#00B894' }
-    default:
-      return null
-  }
-}
 
 export const Card = ({ title, type, create, status, action }) => {
   return (
