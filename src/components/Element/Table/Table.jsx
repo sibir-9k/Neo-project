@@ -9,7 +9,7 @@ import { Card } from "../Card/Card";
 
 const MobileTable = (props) => {
   return (
-    props.rowBlock.map((item, index) => {
+    props.rowClaim.map((item, index) => {
       return (
         <Card
           title={item.title}
@@ -35,7 +35,7 @@ const DesktopTable = (props) => {
       </tbody>
 
       {
-        props.rowBlock.map((item, index) => {
+        props.rowClaim.map((item, index) => {
           return (
             < RowTable
               title={item.title}
@@ -51,13 +51,13 @@ const DesktopTable = (props) => {
 
 export const Table = () => {
 
-  const rowBlock = useSelector((state) => state.list.claims)
+  const rowClaim = useSelector((state) => state.claim.claims)
 
   const { isMobile } = useMobile();
 
   return (
     <>
-      {isMobile ? <MobileTable rowBlock={rowBlock} /> : <DesktopTable rowBlock={rowBlock} />}
+      {isMobile ? <MobileTable rowClaim={rowClaim} /> : <DesktopTable rowClaim={rowClaim} />}
     </>
   )
 }

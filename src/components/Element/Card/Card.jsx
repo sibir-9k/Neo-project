@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { claimTypeColor } from "../../../functions/claimTypeColor.js";
 import { claimStatusColor } from "../../../functions/claimStatusColor.js";
 import "./Card.scss";
-import { Link } from "react-router-dom";
 
 export const Card = ({ title, type, create, status, action }) => {
   return (

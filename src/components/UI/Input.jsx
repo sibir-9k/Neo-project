@@ -4,8 +4,7 @@ import "../Element/Forms/ClaimForm/ClaimForm.scss"
 import { IconLock, IconMail, IconUser } from "../../assets/img/index.js"
 
 
-export const Input = (
-  
+export const Input = ( 
   { value,
     onChangeTitle,
     onChangeValid,
@@ -48,7 +47,7 @@ export const Input = (
           value={value}
           onChange={e => { 
             onChangeValid(e);  
-            // onChangeTitle(e) 
+            onChangeTitle(e) 
           }}
           onBlur={onBlur}
           className={className}

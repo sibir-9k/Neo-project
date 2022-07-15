@@ -1,9 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Button } from "../../../UI/Button/Button";
 import { useInput } from "../../../../hooks/useValidate/useValidation";
 import { Input } from "../../../UI/Input.jsx";
-import { useNavigate } from "react-router-dom";
 import "./LoginForm.scss"
 
 
@@ -49,7 +49,6 @@ export const LoginForm = () => {
 
           onChangeValid={e => email.onChange(e)}
           onBlur={e => email.onBlur(e)}
-
         />
 
         {(password.isDirty && password.isEmpty) && <span style={{ color: "#CC1F1F" }}>Password field cannot be empty</span>}

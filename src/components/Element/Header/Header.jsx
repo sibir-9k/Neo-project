@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./Header.scss"
 import { UserImg, LogOutImg, BurgerMenu } from "../../../assets/img/index.js"
 import { Search } from "../../UI/Search/Search";
 import { NavBar } from "../Navbar/Navbar";
 import { useMobile } from "../../../hooks/useMobile/useMobile";
-import { Link } from "react-router-dom";
+
 
 export const Header = () => {
 

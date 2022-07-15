@@ -52,6 +52,7 @@
 	&-type {
 		width: 30.68vw;
 		margin-bottom: 40px;
+    
 
 		.select > select {
 			align-items: center;
@@ -60,10 +61,12 @@
 			font-size: 18px;
 			line-height: 22px;
 			color: #2d3436;
+      
 		}
 
 		.select {
 			position: relative;
+      
 		}
 
 		.select img {
@@ -95,7 +98,7 @@
 			padding: 13px 17px 13px 16px;
 			margin-top: 8px;
 			appearance: none;
-			&:focus {
+      &:focus {
 				outline: 4px solid rgba(253, 203, 110, 0.4);
 				background: rgba(236, 210, 175, 0.609);
 			}

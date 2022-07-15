@@ -1,12 +1,10 @@
 import React from "react";
-
-// import "./ContentPages.scss"
 import { Routes, Route } from "react-router-dom";
+
 import { CreateClaimPage } from "./CreateClaimPage/CreateClaimPage.jsx";
 import { MainPage } from "./MainPage/MainPage.jsx";
 import { IncomingClaimPage } from "./CreateClaimPage/IncomingClaimPage/IncomingClaimPage";
 import { LoginPage } from "./LoginPage/LoginPage";
-
 import { RegisterPage } from "./RegisterPage/RegisterPage.jsx";
 
 

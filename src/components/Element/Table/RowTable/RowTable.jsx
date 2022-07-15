@@ -1,8 +1,9 @@
 import React from "react"
+import { Link } from "react-router-dom"
+
 import { claimStatusColor } from "../../../../functions/claimStatusColor.js"
 import { claimTypeColor } from "../../../../functions/claimTypeColor.js"
 import "./RowTable.scss"
-import { Link } from "react-router-dom"
 
 export const RowTable = ({ title, type, create, status }) => {
   return (

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import moment from "moment";
-import { v4 as uuidv4 } from 'uuid';
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import "../../../UI/Button/Button.scss"
@@ -8,8 +7,7 @@ import { Button } from "../../../UI/Button/Button";
 import { Input } from "../../../UI/Input.jsx";
 import { Select } from "./Select.jsx";
 import { Description } from "./Description";
-import { createRow } from "../../../../store/action/actions";
-import { useNavigate } from "react-router-dom";
+import { createClaim } from "../../../../store/slices/claimSlice";
 import { useInput } from "../../../../hooks/useValidate/useValidation";
 
 export const ClaimForm = () => {
@@ -23,19 +21,11 @@ export const ClaimForm = () => {
   const navigate = useNavigate();
 
   const onCreatedClick = () => {
-    const createOnObject = {
-      title: form.title,
-      type: form.type,
-      description: form.description,
-      status: '',
-      create: moment().utc().format('DD/MM/YYYY'),
-      id: uuidv4(),
-    }
-    dispatch(createRow(createOnObject));
+    dispatch(createClaim(form));
     setForm({ title: '', type: '', description: '' });
     navigate('/')
   }
-
+  
   return (
     <>
       {(title.isDirty && title.isEmpty) && <span style={{ color: "#CC1F1F" }}>Field cannot be empty</span>}
@@ -74,7 +64,7 @@ export const ClaimForm = () => {
         onBlur={e => description.onBlur(e)}
       />
       <Button value="Cansel" type="cansel"/>
-      <Button value="Create" type="create" disabled={!title.inputValid || !type.inputValid || !description.inputValid} onCreatedClick={() => { onCreatedClick() }} />
+      <Button value="Create" type="create" disabled={!title.inputValid || !type.inputValid || !description.inputValid} onCreatedClick={() => { onCreatedClick(form) }} />
     </>
   )
 }

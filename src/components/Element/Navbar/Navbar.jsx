@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./Navbar.scss";
 import {
@@ -11,7 +12,7 @@ import {
   IconDatabase,
   IconNavigation,
 } from "../../../assets/img/index.js"
-import { Link } from "react-router-dom";
+
 
 const navBlocks = [
   {
