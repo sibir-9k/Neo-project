@@ -12,6 +12,7 @@ const MobileTable = (props) => {
     props.rowClaim.map((item, index) => {
       return (
         <Card
+          key={index + "card"}
           title={item.title}
           type={item.type}
           create={item.create}
@@ -38,6 +39,7 @@ const DesktopTable = (props) => {
         props.rowClaim.map((item, index) => {
           return (
             < RowTable
+              key={index + "row"}
               title={item.title}
               type={item.type}
               create={item.create}

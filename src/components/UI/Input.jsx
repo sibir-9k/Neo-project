@@ -4,9 +4,9 @@ import "../Element/Forms/ClaimForm/ClaimForm.scss"
 import { IconLock, IconMail, IconUser } from "../../assets/img/index.js"
 
 
-export const Input = ( 
+export default React.memo(function Input(
   { value,
-    onChangeTitle,
+    onChangeTitle = (() => { }),
     onChangeValid,
     onBlur,
     label,
@@ -17,7 +17,7 @@ export const Input = (
     className,
     labelClassName,
     wrapperLabel
-  }) => {
+  }) {
 
   const classDivImg = (className) => {
     if (className === 'form-email__input') {
@@ -31,11 +31,11 @@ export const Input = (
 
   const iconInput = (className) => {
     if (className === 'form-email__input') {
-      return <img src={IconMail} alt=""/>
+      return <img src={IconMail} alt="" />
     } else if (className === "form-password__input") {
-      return <img src={IconLock} alt=""/>
+      return <img src={IconLock} alt="" />
     } else if (className === "form-fullname__input") {
-      return <img src={IconUser} alt=""/>
+      return <img src={IconUser} alt="" />
     }
   }
 
@@ -45,9 +45,9 @@ export const Input = (
         {label}:
         <input
           value={value}
-          onChange={e => { 
-            onChangeValid(e);  
-            onChangeTitle(e) 
+          onChange={e => {
+            onChangeValid(e);
+            onChangeTitle(e)
           }}
           onBlur={onBlur}
           className={className}
@@ -62,3 +62,5 @@ export const Input = (
     </div>
   )
 }
+)
+

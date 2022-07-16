@@ -5,18 +5,20 @@ import { IconPlus } from "../../../assets/img/index.js"
 import "./Button.scss"
 import { useMobile } from "../../../hooks/useMobile/useMobile.jsx";
 
-const MobileTable = () =>
+const MobileTable = () => 
   <Link to="creat-claim" className="createClaim">
     <img src={IconPlus} alt="" />
-  </Link>;
+  </Link>
 
-const DesktopTable = () =>
+const DesktopTable = () => 
   <Link to="create-claim" className="createClaim">
     <img src={IconPlus} alt="" />
     Create claim
   </Link>
 
-export const Button = ({ type, disabled, className, onCreatedClick, value }) => {
+
+
+export const Button = ({ type, disabled, className, onCreatedClick, value, onClick }) => {
 
   const { isMobile } = useMobile();
 
@@ -32,7 +34,7 @@ export const Button = ({ type, disabled, className, onCreatedClick, value }) => 
         )
       case "login/register":
         return (
-          <button className={className}>{value}</button>
+          <button className={className} onClick={onClick}>{value}</button>
         )
       case "create-claim":
         return (isMobile ? <MobileTable /> : <DesktopTable />)
