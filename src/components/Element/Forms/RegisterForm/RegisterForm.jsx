@@ -1,8 +1,8 @@
-import React, {useMemo} from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import axios from "axios";
 
+import { dataBase } from "../../../../api/api";
 import { setUsers } from "../../../../store/slices/userSlice";
 import Input from "../../../UI/Input";
 import { Button } from "../../../UI/Button/Button";
@@ -16,10 +16,19 @@ export const RegisterForm = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const dataBase = axios.create({
-    // Headers: null,
-    baseURL: "http://localhost:3001/",
-  });
+
+  const handleSubmit = async (e) => {
+    dispatch(
+      setUsers({
+        fullname: fullname.value,
+        email: email.value,
+        password: password.value,
+        loggetIn: true,
+      })
+    );
+    navigate("/login")
+  };
+
   const createNewUser = (e) => {
     e.preventDefault();
     if (!email.inputValid || !password.inputValid || !fullname.inputValid) {
@@ -38,42 +47,20 @@ export const RegisterForm = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
-    // e.preventDefault();
-
-    dispatch(
-      setUsers({
-        fullname: fullname.value,
-        email: email.value,
-        password: password.value,
-        loggetIn: true,
-      })
-    );
-    navigate("/login")
-  };
-
   return (
     <form className="reg-form" onSubmit={handleSubmit}>
+
       {fullname.isDirty && fullname.isEmpty && <span style={{ color: "#CC1F1F" }}>Name field cannot be empty</span>}
-      {useMemo(
-        () => (
-          <Input label="Fullname" className="form-fullname__input" placeholder="Type your first and last name" labelClassName="form-fullname__label" wrapperLabel="reg-form__fullname form-fullname" type="text" onChangeValid={(e) => fullname.onChange(e)} onBlur={(e) => fullname.onBlur(e)} />
-        ),[fullname.value])}
+      <Input label="Fullname" className="form-fullname__input" placeholder="Type your first and last name" labelClassName="form-fullname__label" wrapperLabel="reg-form__fullname form-fullname" type="text" onChangeValid={(e) => fullname.onChange(e)} onBlur={(e) => fullname.onBlur(e)} />
 
       {email.isDirty && email.isEmpty && <span style={{ color: "#CC1F1F" }}>Mail field cannot be empty</span>}
-      {useMemo(
-        () => (
-          <Input label="Email" className="form-email__input" placeholder="Type your e-mail" labelClassName="form-email__label" wrapperLabel="reg-form__email form-email" type="email" onChangeValid={(e) => email.onChange(e)} onBlur={(e) => email.onBlur(e)} />
-        ),[email.value])}
+      <Input label="Email" className="form-email__input" placeholder="Type your e-mail" labelClassName="form-email__label" wrapperLabel="reg-form__email form-email" type="email" onChangeValid={(e) => email.onChange(e)} onBlur={(e) => email.onBlur(e)} />
 
       {password.isDirty && password.isEmpty && <span style={{ color: "#CC1F1F" }}>Password field cannot be empty</span>}
-      {useMemo(
-        () => (
-          <Input label="Password" className="form-password__input" placeholder="Type your password" labelClassName="form-password__label" wrapperLabel="reg-form__password form-password" type="password" onChangeValid={(e) => password.onChange(e)} onBlur={(e) => password.onBlur(e)} />
-        ),[password.value])}
+      <Input label="Password" className="form-password__input" placeholder="Type your password" labelClassName="form-password__label" wrapperLabel="reg-form__password form-password" type="password" onChangeValid={(e) => password.onChange(e)} onBlur={(e) => password.onBlur(e)} />
 
       <Button value="Register" type="login/register" className="login-form__btn" onClick={createNewUser} />
-       
+
     </form>
   );
 };
