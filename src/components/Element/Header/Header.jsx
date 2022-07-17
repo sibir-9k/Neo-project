@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-import "./Header.scss"
+import { Button } from "../../UI/Button/Button"
 import { UserImg, LogOutImg, BurgerMenu } from "../../../assets/img/index.js"
 import { Search } from "../../UI/Search/Search";
 import { NavBar } from "../Navbar/Navbar";
 import { useMobile } from "../../../hooks/useMobile/useMobile";
-
+import "./Header.scss"
 
 export const Header = () => {
 
   const [menuActive, setMenuActive] = useState(true)
-
   const showMenu = () => setMenuActive(!menuActive);
-
   const { isMobile } = useMobile();
+  const fullName = useSelector(state => state.user.fullname)
 
   const MobileTable = () =>
     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,10 +32,7 @@ export const Header = () => {
 
   return (
     <header className="header">
-      <button className="burger-menu" onClick={showMenu}>
-        <img src={BurgerMenu} alt="" />
-        <NavBar active={!menuActive} setActive={setMenuActive} />
-      </button>
+      <Button type="burger" className="burger-menu" onClick={showMenu} active={!menuActive} setActive={setMenuActive}/>
       <Search />
       <div className="header-user">
         <button className="header-user__btn btn-bell">
@@ -45,7 +42,7 @@ export const Header = () => {
         <div className="header-user__account">
           <img src={UserImg} alt="" />
           <div className="header-user__account  account__name">
-            <span>Егор Фролов</span>
+            <span>{fullName}</span>
           </div>
         </div>
         <Link to="/login" className="header-user__btn">

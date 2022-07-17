@@ -25,37 +25,37 @@ const navBlocks = [
     key: "2",
     title: 'Services',
     img: IconGlobal,
-    path: "/global"
+    path: "#"
   },
   {
     key: "3",
     title: 'Storage',
     img: IconArchive,
-    path: "/achive"
+    path: "#"
   },
   {
     key: "4",
     title: 'Charts',
     img: IconPieChart,
-    path: "/chart"
+    path: "#"
   },
   {
     key: "5",
     title: 'Currency',
     img: IconDollarSing,
-    path: "/dollar"
+    path: "#"
   },
   {
     key: "6",
     title: 'Base',
     img: IconDatabase,
-    path: "/database"
+    path: "#"
   },
   {
     key: "7",
     title: 'Locations',
     img: IconNavigation,
-    path: "/naviganion"
+    path: "#"
   }
 ]
 

@@ -1,24 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-import { IconPlus } from "../../../assets/img/index.js"
+import { NavBar } from "../../Element/Navbar/Navbar.jsx";
+import { IconPlus, BurgerMenu } from "../../../assets/img/index.js"
 import "./Button.scss"
 import { useMobile } from "../../../hooks/useMobile/useMobile.jsx";
 
-const MobileTable = () => 
-  <Link to="creat-claim" className="createClaim">
-    <img src={IconPlus} alt="" />
-  </Link>
-
-const DesktopTable = () => 
+const DesktopTable = ({children}) =>
   <Link to="create-claim" className="createClaim">
     <img src={IconPlus} alt="" />
-    Create claim
+    {children}
   </Link>
 
-
-
-export const Button = ({ type, disabled, className, onCreatedClick, value, onClick }) => {
+export const Button = ({ type, disabled, className, onCreatedClick, value, onClick, active, setActive }) => {
 
   const { isMobile } = useMobile();
 
@@ -36,11 +29,17 @@ export const Button = ({ type, disabled, className, onCreatedClick, value, onCli
         return (
           <button className={className} onClick={onClick}>{value}</button>
         )
+      case "burger":
+        return (
+          <button className={className} onClick={onClick}>
+            <img src={BurgerMenu} alt="" />
+            <NavBar active={active} setActive={setActive} />
+          </button>
+        )
       case "create-claim":
-        return (isMobile ? <MobileTable /> : <DesktopTable />)
-
+        return (isMobile ? <DesktopTable /> : <DesktopTable>Create claim</DesktopTable>)
       default:
-        return <button></button>
+        return null
 
     }
   }

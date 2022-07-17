@@ -21,7 +21,7 @@ export const ClaimForm = () => {
 
 	const onCreatedClick = () => {
 		dispatch(createClaim(form));
-		setForm({title: "", type: "", description: ""});
+		setForm({title: "", type: "", description: "", status: 'new'});
 		navigate("/");
 	};
 
