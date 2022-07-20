@@ -69,12 +69,13 @@
 			align-items: center;
 			width: 100vw;
 			flex-direction: column;
-			justify-content: space-evenly;
+			justify-content: center;
       padding: 0;
 
 			.form__img img {
 				width: 96px;
 				height: 93px;
+        margin-bottom: 72px;
 			}
 		}
 	}
