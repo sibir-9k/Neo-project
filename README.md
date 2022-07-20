@@ -22,7 +22,7 @@ Admin:
 
 - Register new user ('worker')
 
-- added mobile version for iPhone 6/7/8
+- added mobile version for iPhone 6/7/8 & Samsung Galaxy A51/A71
 
 - if the user is not in the system, you cannot log in
 
