@@ -96,6 +96,7 @@ a {
 	border-radius: 16px;
 	border: none;
 	padding: 7.8px 9px;
+  cursor: pointer;
 
 	font-style: normal;
 	font-weight: 700;
@@ -106,6 +107,14 @@ a {
 	text-align: center;
 	letter-spacing: 0.25px;
 	color: #ffffff;
+
+  &:hover {
+		@include canselHoverBtn;
+	}
+
+	&:active {
+		@include canselActiveBtn;
+	}
 }
 
 .login-form__btn {
