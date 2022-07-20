@@ -52,7 +52,7 @@
 	}
 }
 
-@media screen and (max-width: 412px) {
+@media screen and (min-width: 412px) {
 	.wrapper {
 		display: flex;
 		flex-direction: column;
@@ -70,6 +70,7 @@
 			width: 100vw;
 			flex-direction: column;
 			justify-content: space-evenly;
+      padding: 0;
 
 			.form__img img {
 				width: 96px;

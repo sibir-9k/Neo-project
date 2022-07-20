@@ -4,7 +4,7 @@ import {useDispatch} from "react-redux";
 
 import {dataBase} from "../../../../api/api";
 import {setUsers} from "../../../../store/slices/userSlice";
-import {Input} from "../../../UI/Input";
+import Input from "../../../UI/Input";
 import {Button} from "../../../UI/Button/Button";
 import {useInput} from "../../../../hooks/useValidate/useValidation";
 import "./RegisterForm.scss";

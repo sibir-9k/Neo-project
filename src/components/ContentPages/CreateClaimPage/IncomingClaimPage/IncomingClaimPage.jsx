@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { ClaimForm } from "../../../Element/Forms/ClaimForm/ClaimForm";
+import  ClaimForm  from "../../../Element/Forms/ClaimForm/ClaimForm";
 import { Button } from "../../../UI/Button/Button";
 import { Navigation } from "../../Navigation/Navigation";
 import { dataBase } from "../../../../api/api";

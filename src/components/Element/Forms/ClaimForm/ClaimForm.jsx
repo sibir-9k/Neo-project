@@ -5,13 +5,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { dataBase } from "../../../../api/api";
 import "../../../UI/Button/Button.scss";
 import { Button } from "../../../UI/Button/Button";
-import { Input } from "../../../UI/Input.jsx";
+import  Input  from "../../../UI/Input.jsx";
 import { Select } from "./Select.jsx";
 import { Description } from "./Description";
 import { createClaim } from "../../../../store/slices/claimSlice";
 import { useInput } from "../../../../hooks/useValidate/useValidation";
 
-export const ClaimForm = ({ formData }) => {
+export default React.memo(function ClaimForm ({ formData }) {
   const [form, setForm] = useState({ title: "", type: "", description: "" });
 
   const [types, setTypes] = useState([]);
@@ -123,4 +123,5 @@ export const ClaimForm = ({ formData }) => {
       }
     </>
   );
-};
+} )
+ 

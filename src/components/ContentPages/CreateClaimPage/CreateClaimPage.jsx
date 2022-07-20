@@ -1,6 +1,6 @@
 import React from "react";
 
-import {ClaimForm} from "../../Element/Forms/ClaimForm/ClaimForm";
+import ClaimForm from "../../Element/Forms/ClaimForm/ClaimForm";
 import {Navigation} from "../Navigation/Navigation";
 import "./CreateClaimPage.scss";
 import "../ContenContainer.scss";
