@@ -1,56 +1,39 @@
 import {createSlice} from "@reduxjs/toolkit";
 import moment from "moment";
-import { v4 as uuidv4 } from 'uuid';
+import {v4 as uuidv4} from "uuid";
 
+const initialState = {
+	claims: [],
+  page: 1,
+  totalItems: 0,
+};
 export const claimSlice = createSlice({
 	name: "claim",
-	initialState: {
-		claims: [
-			{
-				id: "1",
-				title: "Figma smart web system for to build",
-				create: "12/04/2021",
-				type: "Hardware",
-				status: "declined",
-				description: "dagadfga",
-			},
-			{
-				id: "2",
-				title: "Figma smart web system for to build",
-				create: "12/04/2021",
-				type: "Software",
-				status: "new",
-				description: "zl,fl,sdl;f",
-			},
-			{
-				id: "3",
-				title: "Figma smart web system for to build",
-				create: "12/04/2021",
-				type: "Networking",
-				status: "in progress",
-				description: "ASFas,gal,df",
-			},
-		],
-	},
-
+	initialState,
 	reducers: {
 		createClaim(state, action) {
-      console.log(state)
-      console.log(action)
-
 			state.claims.push({
-        id: uuidv4(),
+				id: uuidv4(),
 				title: action.payload.title,
 				create: moment().utc().format("DD/MM/YYYY"),
 				type: action.payload.type,
-        status: "",
+				status: action.payload.status,
 				description: action.payload.description,
+        
 			});
+		},
+
+    allClaims(state, action){
+      state.claims = action.payload.claims;
+      state.totalItems = action.payload.totalItems;
+    },
+
+    changePage: (state, action) => {
+			state.page = action.payload;
 		},
 	},
 });
 
-
-export const {createClaim} = claimSlice.actions;
+export const {createClaim, allClaims, changePage} = claimSlice.actions;
 
 export default claimSlice.reducer;

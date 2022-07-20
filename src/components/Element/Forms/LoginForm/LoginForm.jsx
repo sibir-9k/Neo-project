@@ -82,4 +82,4 @@ export const LoginForm = () => {
 	);
 };
 
-const LoginForm1 = React.memo(LoginForm);
+// const LoginForm = React.memo(LoginForm);

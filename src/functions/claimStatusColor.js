@@ -1,10 +1,10 @@
 export const claimStatusColor = (status) => {
   switch (status) {
-    case "declined":
+    case "decl":
       return { background: '#E84393' }
     case "new":
       return { background: '#6C5CE7' }
-    case "in progress":
+    case "in-progress":
       return { background: '#FDCB6E' }
     case "done":
       return { background: '#00B894' }

@@ -1,6 +1,7 @@
-
-
 @media screen and (max-width: 375px) {
+  .wrapper{
+    overflow: scroll;
+  }
   .title{
     align-items: center;
     margin: 24px 0px;
