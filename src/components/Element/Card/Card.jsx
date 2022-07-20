@@ -1,11 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
+import { formatDate } from "../../../functions/formatDate";
 import { claimTypeColor } from "../../../functions/claimTypeColor.js";
 import { claimStatusColor } from "../../../functions/claimStatusColor.js";
 import "./Card.scss";
+import { Button } from "../../UI/Button/Button";
 
-export const Card = ({ title, type, create, status, action }) => {
+export const Card = ({ item }) => {
+  const role = useSelector((state) => state.user.user.role);
+  const { status, title, _id, createdAt, type } = item;
+
   return (
     <div className="mobile-container">
       <div className="mobile-card">
@@ -13,23 +18,25 @@ export const Card = ({ title, type, create, status, action }) => {
         <div className="mobile-card__body card-body">
           <div className="card-body__created">
             <b>Created</b>
-            <div>{create}</div>
+            <div>{formatDate(createdAt)}</div>
           </div>
           <div className="card-body__type">
             <b>Type</b>
-            <div className="type-block">
-              <div className="table-type__circle" style={claimTypeColor(type)}></div>
-              {type}
-            </div>
+            {type && (
+              <div className="type-block">
+                <div className="table-type__circle" style={claimTypeColor(type.name)}></div>
+                {type.name}
+              </div>
+            )}
           </div>
+
           <div className="card-body__status">
             <b>Status</b>
-            <div style={claimStatusColor(status)}>{status}</div>
+            {status && (<div style={claimStatusColor(status.slug)}>{status.slug}</div>)}
           </div>
-          <Link to="incoming">{action}</Link>
+          <div>{role.slug === "admin" && <Button type="browse" className="link-card" value="Browse" id={_id} />}</div>
         </div>
       </div>
-
     </div>
-  )
-}
+  );
+};

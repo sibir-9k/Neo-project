@@ -2,9 +2,9 @@
 	height: 35.98vh;
 	width: 91.47vw;
 	margin-bottom: 24px;
-  &:last-child{
-    margin-bottom: 24px; 
-  }
+	&:last-child {
+		margin-bottom: 24px;
+	}
 
 	.mobile-card__title {
 		border-radius: 16px 16px 0px 0px;
@@ -59,6 +59,18 @@
 .type-block {
 	display: flex;
 	align-items: center;
+}
+
+.link-card {
+	border: 1px solid #adadad;
+	border-radius: 16px;
+  padding: 14px 8px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+  color: #858585;
+	line-height: 36px;
+	letter-spacing: 0.25px;
 }
 
 @media screen and (min-width: 412px) {
