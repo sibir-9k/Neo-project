@@ -4,7 +4,7 @@ import "../Element/Forms/ClaimForm/ClaimForm.scss"
 import { IconLock, IconMail, IconUser } from "../../assets/img/index.js"
 
 
-export default React.memo(function Input(
+export const Input = (
   { value,
     onChangeTitle = (() => { }),
     onChangeValid,
@@ -16,8 +16,9 @@ export default React.memo(function Input(
     id,
     className,
     labelClassName,
-    wrapperLabel
-  }) {
+    wrapperLabel,
+    disabled
+  }) => {
 
   const classDivImg = (className) => {
     if (className === 'form-email__input') {
@@ -39,6 +40,7 @@ export default React.memo(function Input(
     }
   }
 
+  
   return (
     <div className={wrapperLabel}>
       <label className={labelClassName} htmlFor={htmlFor}>
@@ -56,11 +58,12 @@ export default React.memo(function Input(
           id={id}
           autoComplete="off"
           required
+          disabled={disabled}
         />
         <div className={classDivImg(className)}>{iconInput(className)}</div>
       </label>
     </div>
   )
 }
-)
+
 
