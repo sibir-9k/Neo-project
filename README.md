@@ -2,17 +2,22 @@
 
 Click me to see the project online - https://neo-project-peach.vercel.app/
 
-
 # Test users
 
 Worker:
 
-login: qwerty1234@gmail.com
+- login: qwerty1234@gmail.com
 
-password: qwerty1234
+- password: qwerty1234
 
 Admin: 
 
-login: admin@neoflex.ru
+- login: admin@neoflex.ru
 
-password: admin12345
+- password: admin12345
+
+# What can be done in the application:
+
+- Log in as worker or admin
+
+- Register new user (work)
