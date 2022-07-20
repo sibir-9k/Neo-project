@@ -1,75 +1,51 @@
-import React from 'react';
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux';
+import { Pagination, PaginationItem } from "@mui/material";
+import { changePage } from "../../../store/slices/claimSlice"
+import "./Pagination.scss"
 
-import classnames from 'classnames';
-import { usePagination, DOTS } from './usePagination.jsx';
-import './Pagination.scss';
+export const Paginationn = () => {
 
-export const Pagination = props => {
-  const {
-    onPageChange,
-    totalCount,
-    siblingCount = 1,
-    currentPage,
-    pageSize,
-    className
-  } = props;
+  const { page, totalItems } = useSelector(state => state.claim)
 
-  const paginationRange = usePagination({
-    currentPage,
-    totalCount,
-    siblingCount,
-    pageSize
-  });
+  const dispatch = useDispatch()
 
-  if (currentPage === 0 || paginationRange.length < 2) {
-    return null;
+  const getPageCount = (count) => {
+
+    return Math.ceil(count / 10);
+  };
+
+  const onChangeHandle = (_, num) => {
+    dispatch(changePage(num))
   }
 
-  const onNext = () => {
-    onPageChange(currentPage + 1);
-  };
-
-  const onPrevious = () => {
-    onPageChange(currentPage - 1);
-  };
-
-  let lastPage = paginationRange[paginationRange.length - 1];
   return (
-    <ul
-      className={classnames('pagination-container', { [className]: className })}
-    >
-      <li
-        className={classnames('pagination-item', {
-          disabled: currentPage === 1
-        })}
-        onClick={onPrevious}
-      >
-        <div className="arrow left" />
-      </li>
-      {paginationRange.map(pageNumber => {
-        if (pageNumber === DOTS) {
-          return <li className="pagination-item dots">&#8230;</li>;
-        }
+    <div>
+      <Pagination
+        variant="outlined"
+        shape="rounded"
 
-        return (
-          <li
-            className={classnames('pagination-item', {
-              selected: pageNumber === currentPage
-            })}
-            onClick={() => onPageChange(pageNumber)}
-          >
-            {pageNumber}
-          </li>
-        );
-      })}
-      <li
-        className={classnames('pagination-item', {
-          disabled: currentPage === lastPage
-        })}
-        onClick={onNext}
-      >
-        <div className="arrow right" />
-      </li>
-    </ul>
-  );
-};
+        count={getPageCount(totalItems)}
+        page={page}
+        onChange={onChangeHandle}
+
+        showFirstButton
+        showLastButton
+
+        sx={{
+          marginY: 4,
+          display: 'flex',
+          justifyContent: 'flex-end'
+        }}
+
+        renderItem={(item) => (
+          <PaginationItem
+            sx={{ color: "#7DB59A", border: '1px solid #7DB59A' }}
+            {...item}
+          />
+        )}
+      />
+
+    </div>
+  )
+}
