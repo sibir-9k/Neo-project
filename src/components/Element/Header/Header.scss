@@ -95,7 +95,7 @@
 	}
 }
 
-@media screen and (max-width: 412px) {
+@media screen and (min-width: 412px) {
 	.header {
 		background: #7db59a;
 		justify-content: space-between;
