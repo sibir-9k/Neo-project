@@ -167,7 +167,7 @@
 	}
 }
 
-@media screen and (max-width: 412px) {
+@media screen and (min-width: 412px) {
 	.form {
 		&-title,
 		&-type,
