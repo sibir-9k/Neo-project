@@ -18,6 +18,15 @@ Admin:
 
 # What can be done in the application:
 
-- Log in as worker or admin
+- Log in as 'worker' or 'admin'
 
-- Register new user (work)
+- Register new user ('worker')
+
+- added mobile version for iPhone 6/7/8
+
+- if the user is not in the system, you cannot log in
+
+- With the 'Worker' role, you can create an application in the form by clicking on the button "Create Claim"
+
+- With the role of 'Admin', you can change the status of the application in the "Browse" link in the form
+
