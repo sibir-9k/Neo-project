@@ -6,6 +6,10 @@ const initialState = {
 	claims: [],
   page: 1,
   totalItems: 0,
+  type: {
+    name: null,
+    slug: null,
+  }
 };
 export const claimSlice = createSlice({
 	name: "claim",
@@ -31,9 +35,15 @@ export const claimSlice = createSlice({
     changePage: (state, action) => {
 			state.page = action.payload;
 		},
+
+    setClaims(state, action){
+      let {title, type, description} = action.payload;
+      type = type.slug;
+      state.claims = {title, type, description}
+    }
 	},
 });
 
-export const {createClaim, allClaims, changePage} = claimSlice.actions;
+export const {createClaim, allClaims, changePage, setClaims} = claimSlice.actions;
 
 export default claimSlice.reducer;

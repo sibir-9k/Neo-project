@@ -35,7 +35,7 @@ export default React.memo(function LoginForm  ()  {
         .catch((err) => console.error(err));
     }
   };
-  console.log(email);
+  
   return (
     <>
       <form className="login-form">

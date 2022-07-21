@@ -1,22 +1,33 @@
-import React, { useEffect, useState } from "react";
-
-import  ClaimForm  from "../../../Element/Forms/ClaimForm/ClaimForm";
-import { Button } from "../../../UI/Button/Button";
-import { Navigation } from "../../Navigation/Navigation";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { dataBase } from "../../../../api/api";
-import { useParams } from "react-router-dom";
-import "./IncomingClaimPage.scss";
+import ClaimForm from "../../../Element/Forms/ClaimForm/ClaimForm";
+import { Button } from "../../../UI/Button/Button";
 import "../../ContenContainer.scss";
+import { Navigation } from "../../Navigation/Navigation";
+import "./IncomingClaimPage.scss";
 
 export const IncomingClaimPage = () => {
   const { id } = useParams();
   const [form, setForm] = useState(null);
+  const [statuses, setStatuses] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     dataBase()
+      .get("/status")
+      .then(({ data }) => setStatuses(data));
+    dataBase()
       .get(`/claim/${id}`)
-      .then((response) => setForm(response.data));
+      .then(({ data }) => setForm(data));
   }, []);
+
+  const updateStatusClaim = (status) => {
+    dataBase().put(`/claim/${id}`, { ...form, status: status.slug, type: form?.type?.slug })
+      .then((response) => navigate("/"))
+
+  };
 
   return (
     <>
@@ -28,8 +39,15 @@ export const IncomingClaimPage = () => {
         {form && <ClaimForm formData={form} />}
         <div className="conteiner-btn">
           <Button type="cansel" className="form-cansel__btn" value="Cansel" />
-          <Button type="create" className="form-create__btn" value="Done" />
-          <Button type="create" className="form-decline__btn" value="Decline" />
+          {statuses.map((status) => (
+            <Button
+              key={status.slug}
+              className={`form-btn form-btn__${status.slug}`}
+              value={status.name}
+              type={status.slug}
+              onClick={() => updateStatusClaim(status)}
+            />
+          ))}
         </div>
       </div>
     </>

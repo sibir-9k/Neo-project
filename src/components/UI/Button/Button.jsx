@@ -29,6 +29,24 @@ export const Button = ({type, disabled, className, onCreatedClick, value, onClic
 						{value}
 					</button>
 				);
+        case "done":
+				return (
+					<button disabled={disabled} className={className} onClick={onClick}>
+						{value}
+					</button>
+				);
+        case "decl":
+				return (
+					<button disabled={disabled} className={className} onClick={onClick}>
+						{value}
+					</button>
+				);
+        case "in-progress":
+				return (
+					<button disabled={disabled} className={className} onClick={onClick}>
+						{value}
+					</button>
+				);
 			case "browse":
 				return (
 					<Link to={`incoming/${id}`} className={className}>
