@@ -3,9 +3,7 @@ import { useSelector } from "react-redux";
 
 const useAuth = () => {
   const loggedIn = useSelector(state => state.user.user.token);
-  console.log(loggedIn)
   return loggedIn;
-  
 };
 
 

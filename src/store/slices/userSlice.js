@@ -15,7 +15,6 @@ const userSlice = createSlice({
   initialState,
   reducers: {
       setUsers(state, action) {
-        console.log(action.payload)
         state.user.email = action.payload.email;
         state.user.token = action.payload.token;
         state.user.fullName = action.payload.fullName;
