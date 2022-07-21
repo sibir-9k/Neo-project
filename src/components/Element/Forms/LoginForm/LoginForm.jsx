@@ -6,10 +6,10 @@ import { dataBase } from "../../../../api/api.js";
 import { setUsers } from "../../../../store/slices/userSlice";
 import { Button } from "../../../UI/Button/Button";
 import { useInput } from "../../../../hooks/useValidate/useValidation";
-import  Input  from "../../../UI/Input.jsx";
+import { Input } from "../../../UI/Input.jsx";
 import "./LoginForm.scss";
 
-export default React.memo(function LoginForm  ()  {
+export const LoginForm = () => {
   const email = useInput("", { isEmpty: true, minLength: 2 });
   const password = useInput("", { isEmpty: true, minLength: 2 });
 
@@ -35,7 +35,7 @@ export default React.memo(function LoginForm  ()  {
         .catch((err) => console.error(err));
     }
   };
-  
+
   return (
     <>
       <form className="login-form">
@@ -80,7 +80,4 @@ export default React.memo(function LoginForm  ()  {
       </form>
     </>
   );
-}) 
-
-
-// LoginForm = React.memo(LoginForm);
+}

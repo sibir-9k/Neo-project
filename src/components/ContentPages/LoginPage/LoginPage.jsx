@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { StartImg, LogoLoginPage } from "../../../assets/img";
 import { Footer } from "../../Element/Footer/Footer";
-import  LoginForm  from "../../Element/Forms/LoginForm/LoginForm";
+import { LoginForm } from "../../Element/Forms/LoginForm/LoginForm";
 import "./LoginPage.scss"
 
 export const LoginPage = () => {
@@ -18,7 +18,7 @@ export const LoginPage = () => {
             <img src={LogoLoginPage} alt="" />
           </div>
           <LoginForm />
-          <p>Not a member? 
+          <p>Not a member?
             <Link to="/register" className="req-registration"> Request registration.</Link>
           </p>
         </div>

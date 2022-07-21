@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { dataBase } from "../../../../api/api";
 import { Button } from "../../../UI/Button/Button";
-import Input from "../../../UI/Input.jsx";
+import { Input } from "../../../UI/Input.jsx";
 import { Select } from "./Select.jsx";
 import { Description } from "./Description";
 import { createClaim } from "../../../../store/slices/claimSlice";
@@ -14,7 +14,6 @@ import "../../../ContentPages/CreateClaimPage/IncomingClaimPage/IncomingClaimPag
 
 export default React.memo(function ClaimForm({ formData }) {
   const [form, setForm] = useState({ title: "", type: "", description: "" });
-
   const [types, setTypes] = useState([]);
 
   const title = useInput("", { isEmpty: true, minLength: 2 });
@@ -75,7 +74,6 @@ export default React.memo(function ClaimForm({ formData }) {
   return (
     <>
       {title.isDirty && title.isEmpty && <span style={{ color: "#CC1F1F" }}>Field cannot be empty</span>}
-
       <Input
         label="Title"
         className="form-title__input"
@@ -90,7 +88,15 @@ export default React.memo(function ClaimForm({ formData }) {
       />
 
       {type.isDirty && type.isEmpty && <span style={{ color: "#CC1F1F" }}>Field cannot be empty</span>}
-      <Select label="Type" className="form-type__select" onChangeType={(e) => setForm({ ...form, type: e.target.value })} value={form.type} onChangeValid={(e) => type.onChange(e)} onBlur={(e) => type.onBlur(e)} options={types} disabled={role.slug === "admin" ? true : false} />
+      <Select label="Type"
+        className="form-type__select"
+        onChangeType={(e) => setForm({ ...form, type: e.target.value })}
+        value={form.type}
+        onChangeValid={(e) => type.onChange(e)}
+        onBlur={(e) => type.onBlur(e)}
+        options={types}
+        disabled={role.slug === "admin" ? true : false}
+      />
 
       {description.isDirty && description.isEmpty && <span style={{ color: "#CC1F1F" }}>Field cannot be empty</span>}
       <Description
@@ -103,6 +109,7 @@ export default React.memo(function ClaimForm({ formData }) {
         onBlur={(e) => description.onBlur(e)}
         disabled={role.slug === "admin" ? true : false}
       />
+
       <div className="conteiner-btn">
         {role.slug === "work" && <Button value="Cansel" type="cansel" className="form-cansel__btn" />}
         {role.slug === "work" && (
