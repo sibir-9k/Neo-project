@@ -178,9 +178,25 @@
 		}
 	}
 }
-@media screen and (max-width: 375px) {
-	.reg-form {
-		width: 91.47vw;
+
+@media screen and (max-width: 1280px) {
+  .reg-form {
+		width: 37.15vw;
+    margin-bottom: 31px;
+	}
+}
+ 
+@media screen and (max-width: 960px) {
+  .reg-form {
+		width: 45.15vw;
+    margin-bottom: 31px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+  .reg-form {
+		width: 50.15vw;
+    margin-bottom: 31px;
 	}
 }
 
@@ -188,5 +204,11 @@
 	.reg-form {
 		width: 91.47vw;
     margin-bottom: 31px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.reg-form {
+		width: 91.47vw;
 	}
 }

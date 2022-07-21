@@ -1,4 +1,10 @@
 .conteiner-btn{
   display: flex;
-  width: 12.92vw;
+}
+
+@media screen and (max-width: 412px) {
+  .conteiner-btn{
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

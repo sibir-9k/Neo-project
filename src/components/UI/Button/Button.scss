@@ -79,6 +79,9 @@ a {
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 36px;
+	display: flex;
+	align-items: center;
+	text-align: center;
 	letter-spacing: 0.25px;
 	color: #858585;
 
@@ -91,12 +94,44 @@ a {
 	}
 }
 
-.form-decline__btn {
+.form-btn__done {
+	background: #7db59a;
+	border-radius: 16px;
+  border: none;
+	padding: 12px 10.5px;
+	margin-right: 24px;
+	height: 48px;
+	cursor: pointer;
+	margin-right: 24px;
+
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 36px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.25px;
+	color: #ffffff;
+
+	&:hover {
+		@include createHoverBtn;
+	}
+
+	&:active {
+		@include createActiveBtn;
+	}
+}
+
+.form-btn__decl {
 	background: #e84393;
 	border-radius: 16px;
-	border: none;
-	padding: 7.8px 9px;
-  cursor: pointer;
+  border: none;
+	padding: 12px 10.5px;
+	margin-right: 24px;
+	height: 48px;
+	cursor: pointer;
+	margin-right: 24px;
 
 	font-style: normal;
 	font-weight: 700;
@@ -109,22 +144,24 @@ a {
 	color: #ffffff;
 
   &:hover {
-		@include canselHoverBtn;
+		@include declineHoverBtn;
 	}
 
 	&:active {
-		@include canselActiveBtn;
+		@include declineActiveBtn;
 	}
 }
 
-.form-progress__btn{
+.form-btn__in-progress{
   background: #FDCB6E;
 	border-radius: 16px;
-	border: none;
-	padding: 7.8px 9px;
-  cursor: pointer;
+  border: none;
+	padding: 12px 10.5px;
+	height: 48px;
+  width: 122px;
+	cursor: pointer;
 
-	font-style: normal;
+  font-style: normal;
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 36px;
@@ -133,6 +170,9 @@ a {
 	text-align: center;
 	letter-spacing: 0.25px;
 	color: #ffffff;
+  &:hover {
+		background: #dfaf55;
+	}
 }
 
 .login-form__btn {
@@ -155,14 +195,27 @@ a {
   cursor: pointer;
 }
 
-@media screen and (max-width: 375px) {
+
+@media screen and (max-width: 412px) {
 	.createClaim {
 		width: 48px;
 		height: 48px;
 	}
+  .form-create__btn {
+    margin-bottom: 10px;
+  }
+  
+  .form-cansel__btn {
+    margin-bottom: 10px;
+  }
+  
+  .form-btn__decl {
+    margin-bottom: 10px;
+  }
+  
 }
 
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 375px) {
 	.createClaim {
 		width: 48px;
 		height: 48px;

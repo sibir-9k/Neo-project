@@ -115,6 +115,139 @@
 	}
 }
 
+
+@media screen and (max-width: 1280px) {
+
+}
+ 
+@media screen and (max-width: 960px) {
+
+}
+
+@media screen and (max-width: 768px) {
+	.navbar {
+		position: fixed;
+		top: 65px;
+		left: -100%;
+		transition: 850ms;
+
+		&Logo {
+			display: none;
+		}
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			img {
+				margin-right: 24px;
+			}
+			span {
+				display: flex;
+				font-style: normal;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 20px;
+				letter-spacing: 0.25px;
+				color: #ffffff;
+			}
+		}
+	}
+	.navbar_active {
+		position: fixed;
+		top: 65px;
+		display: flex;
+		flex-direction: column;
+		width: 68.27vw;
+		padding-left: 16px;
+		background: #7db59a;
+		left: 0;
+		transition: 350ms;
+    height: 100vh;
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+      margin-bottom: 20px;
+			img {
+				margin-right: 24px;
+			}
+			span {
+				display: flex;
+				font-style: normal;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 20px;
+				letter-spacing: 0.25px;
+				color: #ffffff;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	.navbar {
+		position: fixed;
+		top: 65px;
+		left: -100%;
+		transition: 850ms;
+
+		&Logo {
+			display: none;
+		}
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			img {
+				margin-right: 24px;
+			}
+			span {
+				display: flex;
+				font-style: normal;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 20px;
+				letter-spacing: 0.25px;
+				color: #ffffff;
+			}
+		}
+	}
+	.navbar_active {
+		position: fixed;
+		top: 65px;
+		display: flex;
+		flex-direction: column;
+		width: 40.27vw;
+		padding-left: 16px;
+		background: #7db59a;
+		left: 0;
+		transition: 350ms;
+    height: 100vh;
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+      margin-bottom: 20px;
+			img {
+				margin-right: 24px;
+			}
+			span {
+				display: flex;
+				font-style: normal;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 20px;
+				letter-spacing: 0.25px;
+				color: #ffffff;
+			}
+		}
+	}
+}
+
+
 @media screen and (max-width: 412px) {
 	.navbar {
 		position: fixed;

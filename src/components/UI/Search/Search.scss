@@ -63,13 +63,13 @@ input::-webkit-search-results-decoration {
 	}
 }
 
-@media screen and (max-width: 375px) {
+
+@media screen and (max-width: 1200px) {
 	.header-search {
-		display: none;
+		width:450px;
 	}
 }
-
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 900px) {
 	.header-search {
 		display: none;
 	}

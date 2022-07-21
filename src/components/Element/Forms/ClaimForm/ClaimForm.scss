@@ -157,22 +157,43 @@
 	}
 }
 
+
+@media screen and (max-width: 960px) {
+	.form {
+		&-title,
+		&-type,
+		&-description {
+			width: 62.50vw;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.form {
+		&-title,
+		&-type,
+		&-description {
+			width: 76.82vw;
+		}
+	}
+}
+
+@media screen and (max-width: 412px) {
+	.form {
+		&-title,
+		&-type,
+		&-description {
+			width: 89.81vw;
+		}
+	}
+}
+
 @media screen and (max-width: 375px) {
 	.form {
 		&-title,
 		&-type,
 		&-description {
 			width: 91.48vw;
-		}
-	}
-}
-
-@media screen and (min-width: 412px) {
-	.form {
-		&-title,
-		&-type,
-		&-description {
-			width: 89.81vw;
 		}
 	}
 }
