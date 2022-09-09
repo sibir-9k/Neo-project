@@ -34,7 +34,7 @@ export const RegisterForm = () => {
     if (!email.inputValid || !password.inputValid || !fullname.inputValid) {
       console.log("error");
     } else {
-      dataBase
+      dataBase()
         .post("auth/registration", {
           fullName: fullname.value,
           email: email.value,

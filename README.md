@@ -2,6 +2,8 @@
 
 Click me to see the project online - https://neo-project-peach.vercel.app/
 
+Download the archive from the link so that requests work - https://github.com/sibir-9k/REST-API__project-inquiries
+
 # Test users
 
 Worker:
